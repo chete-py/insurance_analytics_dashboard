@@ -46,8 +46,12 @@ if uploaded_file is not None:
         st.write("Error:", e)
 
 def chart_day(df):
-    chart = px.histogram(df, x='Day', color='Day', category_orders={'Day': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']})
+    top_claims = df.groupby('Day')['Claim Type'].value_counts().groupby('Day').head(3).reset_index(name='count')
+    weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    top_claims['Day'] = pd.Categorical(top_claims['Day'], categories=weekdays, ordered=True)
+    chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group')
     return chart
+
 
 def chart_month(df):
     chart = px.histogram(df, x='Month', color='Month', category_orders={'Month': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']})
