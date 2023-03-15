@@ -53,7 +53,6 @@ def chart_month(df):
     chart = px.histogram(df, x='Month', color='Month', category_orders={'Month': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']})
     return chart
 
-
 def chart_year(df):
     chart = px.histogram(df, x='Year', color='Year')
     return chart
@@ -70,8 +69,16 @@ chart_select = st.sidebar.selectbox(
 if uploaded_file is not None:
     if chart_select == "Day of Week Analysis":
         st.plotly_chart(chart_day(df))
+        max_day = df['aDay'].mode()[0]
+        count_max_day = df['Day'].value_counts()[max_day]
+        st.write(f"The day of the week with the most claims is **{max_day}**, with **{count_max_day}** claims.")
+        
     elif chart_select == "Month of Incident Analysis":
         st.plotly_chart(chart_month(df))
+        max_month = df['Month'].mode()[0]
+        count_max_month = df['Month'].value_counts()[max_month]
+        st.write(f"The month with the most claims is **{max_month}**, with **{count_max_month}** claims.")
+        
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
    
