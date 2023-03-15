@@ -39,7 +39,15 @@ if uploaded_file is not None:
 
         df['Frequency'] = np.bool_(1)
         
-        st.dataframe(df.head(5))
+        # Get top 3 claim payouts
+        top_payouts = df.nlargest(5, 'Amount Paid')
+
+        # Select desired columns
+        top_payouts = top_payouts.loc[:, ['Claim No', 'Insurer', 'Loss Date', 'Claim Reserve Amount', 'Amount Paid']]
+
+        # Display table
+        st.table(top_payouts)
+
 
      
 
