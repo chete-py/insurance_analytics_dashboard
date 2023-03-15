@@ -33,7 +33,7 @@ if uploaded_file is not None:
         df['Month'] = pd.to_datetime(df['Loss Date']).dt.month_name()
         df['Day'] = pd.to_datetime(df['Loss Date']).dt.day_name()
         df['Year'] = pd.to_datetime(df['Loss Date']).dt.year
-        df['Frequency'] = np.bool_(1)
+        df['Frequency'] = True
      
 
        
