@@ -34,6 +34,7 @@ if uploaded_file is not None:
         df['Day'] = pd.to_datetime(df['Loss Date']).dt.day_name()
         df['Year'] = pd.to_datetime(df['Loss Date']).dt.year
         df.dropna(subset=['Claim No'], inplace=True)
+        df['Claim Type'] = df['Claim Type'].str.replace('^Work Injury', 'WIBA', regex=True)
 
         df['Frequency'] = np.bool_(1)
         
@@ -51,7 +52,7 @@ def chart_day(df):
     top_claims['Day'] = pd.Categorical(top_claims['Day'], categories=weekdays, ordered=True)
     chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group', 
                    title='Top 3 Claim Types by Day of Week')
-    chart.update_layout(legend=dict(orientation='v', font=dict(size=5)))
+    chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
     return chart
 
 
