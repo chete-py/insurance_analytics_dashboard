@@ -34,13 +34,9 @@ if uploaded_file is not None:
         df['Day'] = pd.to_datetime(df['Loss Date']).dt.day_name()
         df['Year'] = pd.to_datetime(df['Loss Date']).dt.year
         df['Frequency'] = np.bool_(1)
+     
 
-      
-
-        # check if df is defined
-        if 'df' in locals() or 'df' in globals():
-            st.write(df)
-
+       
     except Exception as e:
         st.write("Error:", e)
 
