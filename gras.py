@@ -60,7 +60,7 @@ def chart_occupation(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Day of Week Analysis", "Month of Incident Analysis", "Year Histogram", "Claim Position Analysis"]
+            options=["Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis", "Claim Position Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
