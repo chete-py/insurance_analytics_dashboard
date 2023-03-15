@@ -34,9 +34,7 @@ if uploaded_file is not None:
         df['Year'] = pd.to_datetime(df['Loss Date']).dt.year
         df['Frequency'] = 1
 
-       
-
-        st.dataframe(df)
+      
 
         # check if df is defined
         if 'df' in locals() or 'df' in globals():
