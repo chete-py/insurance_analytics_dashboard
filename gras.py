@@ -69,7 +69,7 @@ if uploaded_file is not None:
         st.plotly_chart(chart_day(df))
     elif chart_select == "Month of Incident Analysis":
         st.plotly_chart(chart_month(df))
-    elif chart_select == "Yearly Claims Analysis":
+    elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
     elif chart_select == "Claim Position Analysis":
         st.plotly_chart(chart_occupation(df))
