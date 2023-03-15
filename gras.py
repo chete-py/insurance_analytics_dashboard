@@ -45,9 +45,9 @@ if uploaded_file is not None:
     except Exception as e:
         st.write("Error:", e)
 
-def chart_day(df, claim_type):
-    filtered_df = df[df['Claim Type'] == claim_type]
-    chart = px.histogram(filtered_df, x='Day', color='Day')
+def chart_day(df):
+    
+    chart = px.histogram(df, x='Day', color='Day')
     return chart
 
 def chart_month(df):
@@ -67,11 +67,6 @@ chart_select = st.sidebar.selectbox(
             label="Select a chart",
             options=["Day of Week Histogram", "Month of Incident", "Year Histogram", "Occupation Pie Chart"]
         )
-
-claim_type = st.sidebar.selectbox(
-    label="Select a claim type",
-    options= df['Claim Type'].unique()
-)
 
 # Call the corresponding chart function based on user selection
 if uploaded_file is not None:
