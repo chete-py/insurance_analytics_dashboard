@@ -39,19 +39,7 @@ if uploaded_file is not None:
 
         df['Frequency'] = np.bool_(1)
         
-        # Get top 3 claim payouts
-        top_payouts = df.nlargest(5, 'Amount Paid')
-
-        # Select desired columns
-        top_payouts = top_payouts.loc[:, ['Claim No', 'Insured', 'Insurer', 'Loss Date', 'Claim reserve amount', 'Amount Paid']]
-
-        # Display table
-        st.table(top_payouts)
-
-
-     
-
-       
+          
     except Exception as e:
         st.write("Error:", e)
 
@@ -98,6 +86,16 @@ if uploaded_file is not None:
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
+        
+    elif chart_select == "Top 5 Claim Payouts":
+        # Get top 3 claim payouts
+        top_payouts = df.nlargest(3, 'Amount Paid')
+
+        # Select desired columns
+        top_payouts = top_payouts.loc[:, ['Claim No', 'Insurer', 'Loss Date', 'Claim Reserve Amount', 'Amount Paid']]
+
+        # Display table
+        st.table(top_payouts)
    
     else:
         st.write("Failed to load data from the uploaded file.")
