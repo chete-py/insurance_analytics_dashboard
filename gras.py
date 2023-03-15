@@ -59,7 +59,7 @@ def chart_year(df):
     return chart
 
 def chart_position(df):
-    chart = px.pie(df, values='Frequency', names='Claim Position')
+    chart = px.pie(df, values='Frequency', names='Claim Type')
     return chart
 
 # Define chart selection dropdown
