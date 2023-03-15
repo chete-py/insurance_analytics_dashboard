@@ -71,7 +71,7 @@ chart_select = st.sidebar.selectbox(
 # Call the corresponding chart function based on user selection
 if uploaded_file is not None:
     if chart_select == "Day of Week Histogram":
-        st.plotly_chart(chart_day(df, claim_type))
+        st.plotly_chart(chart_day(df))
     elif chart_select == "Month of Incident":
         st.plotly_chart(chart_month(df))
     elif chart_select == "Year Histogram":
