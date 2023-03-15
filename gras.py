@@ -34,7 +34,8 @@ if uploaded_file is not None:
         df['Day'] = pd.to_datetime(df['Loss Date']).dt.day_name()
         df['Year'] = pd.to_datetime(df['Loss Date']).dt.year
         df.dropna(subset=['Claim No'], inplace=True)
-        df['Claim Type'] = df['Claim Type'].str.replace('^Work Injury', 'WIBA', regex=True)
+        mask = df['Claim Type'].str.startswith('Work Injury')
+        df.loc[mask, 'Claim Type'] = 'WIBA'
 
         df['Frequency'] = np.bool_(1)
         
