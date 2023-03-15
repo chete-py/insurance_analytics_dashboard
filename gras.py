@@ -69,7 +69,7 @@ chart_select = st.sidebar.selectbox(
 if uploaded_file is not None:
     if chart_select == "Day of Week Analysis":
         st.plotly_chart(chart_day(df))
-        max_day = df['aDay'].mode()[0]
+        max_day = df['Day'].mode()[0]
         count_max_day = df['Day'].value_counts()[max_day]
         st.write(f"The day of the week with the most claims is **{max_day}**, with **{count_max_day}** claims.")
         
