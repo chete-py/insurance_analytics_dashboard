@@ -43,7 +43,7 @@ if uploaded_file is not None:
         top_payouts = df.nlargest(5, 'Amount Paid')
 
         # Select desired columns
-        top_payouts = top_payouts.loc[:, ['Claim No', 'Insurer', 'Loss Date', 'Claim Reserve Amount', 'Amount Paid']]
+        top_payouts = top_payouts.loc[:, ['Claim No', 'Insured', 'Insurer', 'Loss Date', 'Claim reserve amount', 'Amount Paid']]
 
         # Display table
         st.table(top_payouts)
