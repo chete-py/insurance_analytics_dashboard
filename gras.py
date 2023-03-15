@@ -37,7 +37,7 @@ if uploaded_file is not None:
 
         df['Frequency'] = np.bool_(1)
         
-        st.dataframe(df)
+        st.dataframe(df.head(5))
 
      
 
