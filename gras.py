@@ -8,7 +8,7 @@ from datetime import datetime
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # title of the app
-st.title("Data Visualization App")
+st.title("Gras Savoye Client Claims Analytics ")
 
 # Add a sidebar
 st.sidebar.image('graslogo.jpg', use_column_width=True)
@@ -60,18 +60,18 @@ def chart_occupation(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Day of Week Histogram", "Month of Incident", "Year Histogram", "Occupation Pie Chart"]
+            options=["Day of Week Analysis", "Month of Incident Analysis", "Year Histogram", "Claim Position Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
 if uploaded_file is not None:
-    if chart_select == "Day of Week Histogram":
+    if chart_select == "Day of Week Analysis":
         st.plotly_chart(chart_day(df))
-    elif chart_select == "Month of Incident":
+    elif chart_select == "Month of Incident Analysis":
         st.plotly_chart(chart_month(df))
-    elif chart_select == "Year Histogram":
+    elif chart_select == "Yearly Claims Analysis":
         st.plotly_chart(chart_year(df))
-    elif chart_select == "Occupation Pie Chart":
+    elif chart_select == "Claim Position Analysis":
         st.plotly_chart(chart_occupation(df))
     else:
         st.write("Failed to load data from the uploaded file.")
