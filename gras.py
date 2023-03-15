@@ -51,7 +51,7 @@ def chart_day(df):
     top_claims['Day'] = pd.Categorical(top_claims['Day'], categories=weekdays, ordered=True)
     chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group', 
                    title='Top 3 Claim Types by Day of Week')
-    chart.update_layout(legend=dict(orientation='v', font=dict(size=10)))
+    chart.update_layout(legend=dict(orientation='v', font=dict(size=5)))
     return chart
 
 
