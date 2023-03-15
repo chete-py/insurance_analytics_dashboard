@@ -49,8 +49,11 @@ def chart_day(df):
     top_claims = df.groupby('Day')['Claim Type'].value_counts().groupby('Day').head(3).reset_index(name='count')
     weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     top_claims['Day'] = pd.Categorical(top_claims['Day'], categories=weekdays, ordered=True)
-    chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group')
+    chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group', 
+                   title='Top 3 Claim Types by Day of Week')
+    chart.update_layout(legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1))
     return chart
+
 
 
 def chart_month(df):
