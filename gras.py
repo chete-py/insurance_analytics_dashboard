@@ -58,14 +58,14 @@ def chart_year(df):
     chart = px.histogram(df, x='Year', color='Year')
     return chart
 
-def chart_occupation(df):
+def chart_position(df):
     chart = px.pie(df, values='Frequency', names='Claim Position')
     return chart
 
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis", "Claim Position Analysis"]
+            options=["Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis", "Claim Position Distribution"]
         )
 
 # Call the corresponding chart function based on user selection
@@ -76,8 +76,8 @@ if uploaded_file is not None:
         st.plotly_chart(chart_month(df))
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
-    elif chart_select == "Claim Position Analysis":
-        st.plotly_chart(chart_occupation(df))
+    elif chart_select == "Claim Position Distribution":
+        st.plotly_chart(chart_position(df))
     else:
         st.write("Failed to load data from the uploaded file.")
 else:
