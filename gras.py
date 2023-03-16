@@ -30,7 +30,7 @@ if uploaded_file is not None:
 
         # convert date column to month name
         df = df.iloc[1:]
-        df['Month'] = pd.to_datetime(df['Loss Date']).dt.month_name()        
+        df['Month'] = pd.to_datetime(df['Loss Date']).dt.strftime('%B')      
         df['Day'] = pd.to_datetime(df['Loss Date']).dt.day_name()
         df['Year'] = pd.to_datetime(df['Loss Date']).dt.year
         df.dropna(subset=['Claim No'], inplace=True)
