@@ -48,32 +48,30 @@ if uploaded_file is not None:
     except Exception as e:
         st.write("Error:", e)
 
+import pandas as pd
+import plotly.express as px
+
 def chart_time(df):
-    # Group by day and time range
-    time_range_labels = ['00:00 - 03:00', '03:00 - 06:00', '06:00 - 09:00', '09:00 - 12:00',
-                         '12:00 - 15:00', '15:00 - 18:00', '18:00 - 21:00', '21:00 - 00:00']
-    df['Time of Loss'] = df['Time of Loss'].astype(str)  # Convert to string
-    time_range_bins = pd.interval_range(start='00:00:00', end='24:00:00', freq='3H')
-    df['Time Range'] = pd.cut(df['Time of Loss'], bins=time_range_bins, labels=time_range_labels, include_lowest=True)
-
-    # Get the counts for each time range
-    time_counts = df.groupby('Time Range')['Claim Type'].value_counts().reset_index(name='count')
-
-    # Create a DataFrame for the missing time
-    missing_time_df = pd.DataFrame({
-        'Time Range': 'Missing Time',
-        'Claim Type': 'Missing Time',
-        'count': [df.loc[df['Time of Loss'] == '00:00:01', 'Claim Type'].count()]
-    })
-
-    # Concatenate the missing time DataFrame with the counts DataFrame
-    time_counts = pd.concat([missing_time_df, time_counts])
-
-    # Create the chart
-    chart = px.bar(time_counts, x='Time Range', y='count', color='Claim Type',
-                   title='Claim Frequency by Time Range')
+    # Create bins for 3-hour time intervals
+    bins = pd.interval_range(start=pd.Timestamp('00:00:00'), end=pd.Timestamp('24:00:00'), freq='3H')
+    labels = ['Missing Time', '03:00 - 06:00', '06:00 - 09:00', '09:00 - 12:00',
+              '12:00 - 15:00', '15:00 - 18:00', '18:00 - 21:00', '21:00 - 00:00']
+    
+    # Exclude the first 1 second from the first bin
+    df.loc[df['Time of Loss'] == '00:00:01', 'Time of Loss'] = '00:00:02'
+    
+    # Group the time values into the 3-hour bins
+    df['Time Range'] = pd.cut(pd.to_datetime(df['Time of Loss'], format='%H:%M:%S'), bins=bins, labels=labels, include_lowest=True)
+    
+    # Count the number of claims for each time range and claim type
+    counts = df.groupby(['Time Range', 'Claim Type']).size().reset_index(name='Frequency')
+    
+    # Plot the chart using Plotly
+    chart = px.bar(counts, x='Time Range', y='Frequency', color='Claim Type', title='Claim Frequency by Time Range')
     chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
+    
     return chart
+
   
     
                 
