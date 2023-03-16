@@ -48,21 +48,32 @@ if uploaded_file is not None:
     except Exception as e:
         st.write("Error:", e)
 
-def chart_day(df):
-    # Filter out missing time values
-    df = df.loc[df['Time of Loss'] != '00:00:01']
-
+def chart_time(df):
     # Group by day and time range
     time_range_labels = ['00:00 - 03:00', '03:00 - 06:00', '06:00 - 09:00', '09:00 - 12:00',
                          '12:00 - 15:00', '15:00 - 18:00', '18:00 - 21:00', '21:00 - 00:00']
     time_range_bins = pd.interval_range(start=pd.to_timedelta('00:00:00'), end=pd.to_timedelta('24:00:00'), freq='3H')
     df['Time Range'] = pd.cut(pd.to_timedelta(df['Time of Loss']), bins=time_range_bins, labels=time_range_labels, include_lowest=True)
 
-    top_claims = df.groupby('Day')['Claim Type'].value_counts().groupby('Day').head(3).reset_index(name='count')
-    weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    top_claims['Day'] = pd.Categorical(top_claims['Day'], categories=weekdays, ordered=True)
-    top_claims = top_claims.sort_values('Day')
+    # Get the counts for each time range
+    time_counts = df.groupby('Time Range')['Claim Type'].value_counts().reset_index(name='count')
 
+    # Create a DataFrame for the missing time
+    missing_time_df = pd.DataFrame({
+        'Time Range': 'Missing Time',
+        'Claim Type': 'Missing Time',
+        'count': [df.loc[df['Time of Loss'] == '00:00:01', 'Claim Type'].count()]
+    })
+
+    # Concatenate the missing time DataFrame with the counts DataFrame
+    time_counts = pd.concat([missing_time_df, time_counts])
+
+    # Create the chart
+    chart = px.bar(time_counts, x='Time Range', y='count', color='Claim Type',
+                   title='Claim Frequency by Time Range')
+    chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
+    return chart
+   
     
                 
 def chart_day(df):
