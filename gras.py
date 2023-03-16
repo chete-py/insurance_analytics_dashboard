@@ -80,7 +80,7 @@ def chart_year(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Top 5 Claim Payouts", "Amount Paid Analysis", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
+            options=["View Data Frame", "Top 5 Claim Payouts", "Amount Paid Analysis", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
@@ -102,6 +102,10 @@ if uploaded_file is not None:
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
+        
+    elif chart_select == "View Data Frame":
+        st.write(df)
+
         
     elif chart_select == "Amount Paid Analysis":
         st.plotly_chart(chart_amountpaid(df))
