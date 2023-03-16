@@ -52,8 +52,9 @@ def chart_time(df):
     # Group by day and time range
     time_range_labels = ['00:00 - 03:00', '03:00 - 06:00', '06:00 - 09:00', '09:00 - 12:00',
                          '12:00 - 15:00', '15:00 - 18:00', '18:00 - 21:00', '21:00 - 00:00']
-    time_range_bins = pd.interval_range(start=pd.to_timedelta('00:00:00'), end=pd.to_timedelta('24:00:00'), freq='3H')
-    df['Time Range'] = pd.cut(pd.to_timedelta(df['Time of Loss']), bins=time_range_bins, labels=time_range_labels, include_lowest=True)
+    df['Time of Loss'] = df['Time of Loss'].astype(str)  # Convert to string
+    time_range_bins = pd.interval_range(start='00:00:00', end='24:00:00', freq='3H')
+    df['Time Range'] = pd.cut(df['Time of Loss'], bins=time_range_bins, labels=time_range_labels, include_lowest=True)
 
     # Get the counts for each time range
     time_counts = df.groupby('Time Range')['Claim Type'].value_counts().reset_index(name='count')
@@ -73,7 +74,7 @@ def chart_time(df):
                    title='Claim Frequency by Time Range')
     chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
     return chart
-   
+  
     
                 
 def chart_day(df):
