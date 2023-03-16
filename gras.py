@@ -122,7 +122,7 @@ if uploaded_file is not None:
         num_claims = len(df["Claim No"])
         st.markdown(f"**Total number of claims:** {num_claims}")
         claims_per_type = df.groupby("Claim Type").size()
-        st.markdown(claims_per_type)
+        st.write(claims_per_type)
 
         
     elif chart_select == "Amount Paid Analysis":
