@@ -37,11 +37,8 @@ if uploaded_file is not None:
         mask = df['Claim Type'].str.startswith('Work Injury')
         df.loc[mask, 'Claim Type'] = 'WIBA'
         
-        
-
-        
-        df['Frequency'] = np.bool_(1)
-        
+              
+        df['Frequency'] = np.bool_(1)       
        
         
           
