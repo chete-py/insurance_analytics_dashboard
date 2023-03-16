@@ -69,14 +69,12 @@ def chart_month(df):
     return chart
 
 def chart_year(df):
-    chart = px.histogram(df, x='Year', color='Year')
-    chart.update_layout(xaxis={'tickmode': 'linear', 'dtick': 1, 'tick0': 2013, 'tickvals': list(range(2013, 2023))})
-    chart.update_yaxes(title='Number of Claims')
-    chart.update_traces(marker_color='#636EFA', marker_line_color='rgb(8,48,107)', marker_line_width=1.5, opacity=0.6)
+    chart = px.histogram(df, x='Year', color='Year', barmode ='group')
+    chart.update_yaxes(title='Number of Claims')   
     chart.update_layout(title_text='Frequency of Claims per Year')
     chart.update_layout(xaxis_title='Year', yaxis_title='Frequency')
     chart.update_layout(title_x=0.5)
-    chart.update_layout(plot_bgcolor='white', bargap=0.15)
+  
     return chart
 
 
