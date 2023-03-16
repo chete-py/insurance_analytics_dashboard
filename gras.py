@@ -60,8 +60,7 @@ def chart_amountpaid(df):
     df['Amount Range'] = pd.cut(df['Amount Paid'], bins=bins, labels=labels)
     chart = px.histogram(df, x='Amount Range', color='Amount Range', category_orders={'Amount Range': labels}, title = 'CLAIM PAYOUT RANGE')
     chart.update_yaxes(title='Number of Claims')
-
-
+    return chart
 
 def chart_month(df):
     chart = px.histogram(df, x='Month', color='Month', category_orders={'Month': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']})
