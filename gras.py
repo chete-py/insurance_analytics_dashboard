@@ -61,7 +61,7 @@ import plotly.express as px
 def chart_amountpaid(df, include_empty_ranges=True):
     bins = [-0.1, 0, 50000, 100000, 500000, 1000000, 5000000, np.inf]
     labels = ['NIL', '1 - 50K', '50K - 100K', '100K - 500K', '500K - 1M', '1M - 5M', 'Over 5M']
-    df['Amount Range'] = pd.cut(df['Amount Paid'], bins=bins, labels=labels)
+    df['Amount Range'] = pd.cut(df['Claim reserve amount'], bins=bins, labels=labels)
     
     if include_empty_ranges:
         chart = px.histogram(df, x='Amount Range', color='Amount Range', 
@@ -127,7 +127,7 @@ if uploaded_file is not None:
         
     elif chart_select == "Amount Paid Analysis":
         st.plotly_chart(chart_amountpaid(df, include_empty_ranges=False))
-        no_pay_claims = len(df[df['Amount Paid'] == 0])
+        no_pay_claims = len(df[df['Claim reserve amount'] == 0])
 
         # Add sentence to describe claims with no amount paid
         st.markdown(f"It is worth noting that {no_pay_claims} claims had nil Amount Paid. This is probably due to the claim being Report Only, Below Excess, Settlement Pending or absence of data on the payment. ")
