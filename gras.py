@@ -141,7 +141,7 @@ if uploaded_file is not None:
 
        
         # Display styled table
-        st.write(styled_table)
+        st.write(top_payouts)
    
     else:
         st.write("Failed to load data from the uploaded file.")
