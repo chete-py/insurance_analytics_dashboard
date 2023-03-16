@@ -36,6 +36,34 @@ if uploaded_file is not None:
         df.dropna(subset=['Claim No'], inplace=True)
         mask = df['Claim Type'].str.startswith('Work Injury')
         df.loc[mask, 'Claim Type'] = 'WIBA'
+        
+        # Define a function to group the time ranges
+        def group_time(time):
+            if time == "00:00:01":
+                return "Missing Time"
+            else:
+                hour = datetime.strptime(time, "%H:%M:%S").hour
+                if hour >= 0 and hour < 3:
+                    return "00:00 - 03:00"
+                elif hour >= 3 and hour < 6:
+                    return "03:00 - 06:00"
+                elif hour >= 6 and hour < 9:
+                    return "06:00 - 09:00"
+                elif hour >= 9 and hour < 12:
+                    return "09:00 - 12:00"
+                elif hour >= 12 and hour < 15:
+                    return "12:00 - 15:00"
+                elif hour >= 15 and hour < 18:
+                    return "15:00 - 18:00"
+                elif hour >= 18 and hour < 21:
+                    return "18:00 - 21:00"
+                else:
+                    return "21:00 - 00:00"
+
+        # Apply the function to create a new column
+        df['Time Range'] = df['Time of Incident'].apply(group_time)
+        # Group the data by time range and count the frequency
+        time_counts = df.groupby('Time Range').size().reset_index(name='Frequency')
 
         df['Frequency'] = np.bool_(1)
         
@@ -45,12 +73,17 @@ if uploaded_file is not None:
     except Exception as e:
         st.write("Error:", e)
 
+def chart_time(df):
+    chart = px.bar(time_counts, x='Time Range', y='Frequency', title='TIME OF INCIDENT ANALYSIS')
+    return chart
+    
+                
 def chart_day(df):
     top_claims = df.groupby('Day')['Claim Type'].value_counts().groupby('Day').head(3).reset_index(name='count')
     weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     top_claims['Day'] = pd.Categorical(top_claims['Day'], categories=weekdays, ordered=True)
     top_claims = top_claims.sort_values('Day')
-    chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group', 
+    chart = px.bar(top_claims, x='Day', y='Number of Claims', color='Claim Type', barmode='group', 
                    title='Claim Frequency in top 3 Insurance Classes by Day of Week')
     chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
     return chart
@@ -71,7 +104,7 @@ def chart_year(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Top 5 Claim Payouts", "Day of Incident Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
+            options=["Top 5 Claim Payouts", "Time of Incident Analysis", "Day of Incident Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
@@ -88,6 +121,9 @@ if uploaded_file is not None:
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
+        
+     elif chart_select == "Time of Incident Analysis":
+        st.plotly_chart(chart_time(df))
         
     elif chart_select == "Top 5 Claim Payouts":
         # Get top 3 claim payouts
