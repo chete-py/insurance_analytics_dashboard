@@ -104,7 +104,7 @@ if uploaded_file is not None:
         
         
     elif chart_select == "Month of Incident Analysis":
-        st.plotly_chart(chart_month(df))
+        # st.plotly_chart(chart_month(df))
         max_count = df['Month'].value_counts().max()
         max_months = df['Month'].value_counts()[df['Month'].value_counts() == max_count].index.tolist()
 
