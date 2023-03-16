@@ -104,7 +104,7 @@ if uploaded_file is not None:
         
         
     elif chart_select == "Month of Incident Analysis":
-        # st.plotly_chart(chart_month(df))
+        st.plotly_chart(chart_month(df))
         max_count = df['Month'].value_counts().max()
         max_months = df['Month'].value_counts()[df['Month'].value_counts() == max_count].index.tolist()
 
@@ -118,7 +118,7 @@ if uploaded_file is not None:
         st.plotly_chart(chart_year(df))
         
     elif chart_select == "View Data Frame":
-        st.write(df)
+        # st.write(df)
         num_claims = len(df["Claim No"])
         st.markdown(f"**Total number of claims:** {num_claims}")
         claims_per_type = df.groupby("Claim Type").size()
