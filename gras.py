@@ -53,7 +53,12 @@ def chart_day(df):
     chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
     return chart
 
-
+def chart_amountpaid(df):
+    bins = [0, 50000, 100000, 500000, 1000000, 5000000, np.inf]
+    labels = ['1-50,000', '50,000-100,000', '100,000-500,000', '500,000-1,000,000', '1,000,000-5,000,000', 'Over 5,000,000']
+    df['Amount Range'] = pd.cut(df['Amount Paid'], bins=bins, labels=labels)
+    chart = px.histogram(df, x='Amount Range', color='Amount Range')
+    return chart
 
 
 def chart_month(df):
@@ -69,7 +74,7 @@ def chart_year(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Top 5 Claim Payouts", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
+            options=["Top 5 Claim Payouts", "Amount Paid Analysis", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
@@ -86,6 +91,9 @@ if uploaded_file is not None:
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
+        
+    elif chart_select == "Amount Paid Analysis":
+        st.plotly_chart(chart_amountpaid(df))
         
     elif chart_select == "Top 5 Claim Payouts":
         # Get top 3 claim payouts
