@@ -57,10 +57,11 @@ def chart_day(df):
 def chart_amountpaid(df):
     bins = [0, 50000, 100000, 500000, 1000000, 5000000, np.inf]
     labels = ['1 - 50K', '50K - 100K', '100K - 500K', '500K - 1M', '1M - 5M', 'Over 5M']
-    df['Amount Range'] = pd.cut(df['Claim reserve amount'], bins=bins, labels=labels)
-    chart = px.histogram(df, x='Amount Range', color='Amount Range', category_orders={'Amount Range': labels}, title = 'CLAIM PAYOUT RANGE')
+    df['Amount Range'] = pd.cut(df['Amount Paid'], bins=bins, labels=labels)
+    chart = px.bar(df, x='Amount Range', color='Amount Range', category_orders={'Amount Range': labels}, title = 'CLAIM PAYOUT RANGE')
     chart.update_yaxes(title='Number of Claims')
     return chart
+
 
 
 def chart_month(df):
@@ -109,7 +110,7 @@ if uploaded_file is not None:
         
     elif chart_select == "Amount Paid Analysis":
         st.plotly_chart(chart_amountpaid(df))
-        no_pay_claims = len(df[df['Claim reserve amount'] == 0])
+        no_pay_claims = len(df[df['Amount Paid'] == 0])
 
         # Add sentence to describe claims with no amount paid
         st.markdown(f"It is worth noting that {no_pay_claims} claims had nil Amount Paid. This is probably due to the claim being Report Only, Below Excess, Settlement Pending or absence of data on the payment. ")
