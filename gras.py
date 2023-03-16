@@ -71,12 +71,12 @@ def chart_year(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Top 5 Claim Payouts", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
+            options=["Top 5 Claim Payouts", "Day of Incident Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
 if uploaded_file is not None:
-    if chart_select == "Day of Week Analysis":
+    if chart_select == "Day of Incident Analysis":
         st.plotly_chart(chart_day(df))
         
         
@@ -94,7 +94,7 @@ if uploaded_file is not None:
         top_payouts = df.nlargest(5, 'Amount Paid')
 
         # Select desired columns
-        top_payouts = top_payouts.loc[:, ['Claim No', 'Insurer', 'Loss Date', 'Claim reserve amount', 'Amount Paid']]
+        top_payouts = top_payouts.loc[:, ['Claim No', 'Insurer', 'Year', 'Claim reserve amount', 'Amount Paid']]
 
         # Display table
         st.table(top_payouts)
