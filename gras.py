@@ -36,24 +36,26 @@ if uploaded_file is not None:
         df.dropna(subset=['Claim No'], inplace=True)
         mask = df['Claim Type'].str.startswith('Work Injury')
         df.loc[mask, 'Claim Type'] = 'WIBA'
+
+        df['Frequency'] = np.bool_(1)
         
-              
-        df['Frequency'] = np.bool_(1)       
-       
+        # Create a new column with 3-hour time intervals
+        df['Time Interval'] = pd.cut(df['Loss Date'].dt.hour, bins=8, labels=["00-03", "03-06", "06-09", "09-12", "12-15", "15-18", "18-21", "21-00"], include_lowest=True)
+
+        # Select desired columns
+        df = df.loc[:, ['Loss Date', 'Time Interval', 'Claim Type']]
         
           
     except Exception as e:
         st.write("Error:", e)
- 
-    
-                
+
 def chart_day(df):
     top_claims = df.groupby('Day')['Claim Type'].value_counts().groupby('Day').head(3).reset_index(name='count')
     weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     top_claims['Day'] = pd.Categorical(top_claims['Day'], categories=weekdays, ordered=True)
     top_claims = top_claims.sort_values('Day')
-    chart = px.bar(top_claims, x='Day', y='Number of Claims', color='Claim Type', barmode='group', 
-                   title='Claim Frequency in top 3 Insurance Classes by Day of Week')
+    chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group', 
+                   title='Top 3 Claim Types by Day of Week')
     chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
     return chart
 
@@ -73,12 +75,12 @@ def chart_year(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Top 5 Claim Payouts", "Day of Incident Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
+            options=["Top 5 Claim Payouts", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
 if uploaded_file is not None:
-    if chart_select == "Day of Incident Analysis":
+    if chart_select == "Day of Week Analysis":
         st.plotly_chart(chart_day(df))
         
         
@@ -91,13 +93,12 @@ if uploaded_file is not None:
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
         
-            
     elif chart_select == "Top 5 Claim Payouts":
         # Get top 3 claim payouts
         top_payouts = df.nlargest(5, 'Amount Paid')
 
         # Select desired columns
-        top_payouts = top_payouts.loc[:, ['Claim No', 'Insurer', 'Year', 'Claim reserve amount', 'Amount Paid']]
+        top_payouts = top_payouts.loc[:, ['Claim No', 'Insurer', 'Loss Date', 'Claim reserve amount', 'Amount Paid']]
 
         # Display table
         st.table(top_payouts)
