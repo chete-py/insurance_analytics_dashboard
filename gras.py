@@ -65,12 +65,12 @@ def chart_amountpaid(df):
 
 def chart_month(df):
     chart = px.histogram(df, x='Month', color='Month', category_orders={'Month': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']})
-    chart.update_yaxes(title='Monthly Claims Distribution')
+    chart.update_yaxes(title='Number of Claims')
     return chart
 
 def chart_year(df):
     chart = px.bar(df, x='Year', color='Year')
-    chart.update_yaxes(title='Annual Claims Distribution')
+    chart.update_yaxes(title='Number of Claims')
     return chart
 
 
