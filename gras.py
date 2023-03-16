@@ -58,9 +58,8 @@ def chart_amountpaid(df):
     bins = [0, 50000, 100000, 500000, 1000000, 5000000, np.inf]
     labels = ['1 - 50K', '50K - 100K', '100K - 500K', '500K - 1M', '1M - 5M', 'Over 5M']
     df['Amount Range'] = pd.cut(df['Amount Paid'], bins=bins, labels=labels)
-    chart = px.bar(df, x='Amount Range', color='Amount Range', category_orders={'Amount Range': labels}, title = 'CLAIM PAYOUT RANGE')
+    chart = px.histogram(df, x='Amount Range', color='Amount Range', category_orders={'Amount Range': labels}, title = 'CLAIM PAYOUT RANGE')
     chart.update_yaxes(title='Number of Claims')
-    return chart
 
 
 
