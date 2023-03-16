@@ -69,10 +69,10 @@ def chart_month(df):
     return chart
 
 def chart_year(df):
-    chart = px.histogram(df, x='Year', color='Year')
+    chart = px.bar(df, x='Year', color='Year')
     chart.update_yaxes(title='Number of Claims')
     chart.update_layout(xaxis={'dtick': 1})
-    return chart
+    return char
 
 
 
