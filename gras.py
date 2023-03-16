@@ -105,6 +105,10 @@ if uploaded_file is not None:
         
     elif chart_select == "Amount Paid Analysis":
         st.plotly_chart(chart_amountpaid(df))
+        no_pay_claims = len(df[df['Amount Paid'] == 0])
+
+        # Add sentence to describe claims with no amount paid
+        st.markdown(f"{no_pay_claims} claims had no amount paid. This is probably due to the claim being Report Only, Settlement Pending or absence of data on the payment. ")
         
     elif chart_select == "Top 5 Claim Payouts":
         # Get top 3 claim payouts
