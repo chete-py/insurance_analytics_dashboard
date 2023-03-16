@@ -139,18 +139,8 @@ if uploaded_file is not None:
         # Select desired columns
         top_payouts = top_payouts.loc[:, ['Claim No', 'Claim Type', 'Insurer', 'Loss Date', 'Claim reserve amount', 'Amount Paid']]
 
-        # Create CSS styles for table
-        styles = [
-        dict(selector='table', props=[('border-collapse', 'separate'), ('border-spacing', '0px 8px')]),
-        dict(selector='th, td', props=[('padding', '12px 16px'), ('text-align', 'left'), ('border', '2px solid black'), ('border-style', 'none none solid none')]),
-        dict(selector='th', props=[('background-color', '#F9C784'), ('font-weight', 'bold')]),
-        dict(selector='tr:nth-child(even)', props=[('background-color', '#F4F4F4')])
-        ]
-
-    # Apply styles to table
-        styled_table = top_payouts.style.set_table_styles(styles)
-
-     # Display styled table
+       
+        # Display styled table
         st.write(styled_table)
    
     else:
