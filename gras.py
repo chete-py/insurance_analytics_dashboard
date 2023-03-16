@@ -69,15 +69,12 @@ def chart_month(df):
     return chart
 
 def chart_year(df):
-    chart = px.histogram(df, x='Year', color='Year')
-    chart.update_layout(xaxis={'tickmode': 'linear', 'dtick': 1})
-    chart.update_yaxes(title='Number of Claims') 
-    
-    years = sorted(df['Year'].unique())
-    year_labels = [f"[{year}]" for year in years]
-    chart.update_xaxes(tickvals=years, ticktext=year_labels)
-
+    chart = px.histogram(df, x='Year', color='Year' barmode='group')
+    chart.update_layout(xaxis={'dtick': 1})
+    chart.update_yaxes(title='Number of Claims')
     return chart
+
+
 
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
