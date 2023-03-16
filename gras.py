@@ -66,13 +66,14 @@ def chart_amountpaid(df, include_empty_ranges=True):
     if include_empty_ranges:
         chart = px.histogram(df, x='Amount Range', color='Amount Range', 
                               category_orders={'Amount Range': labels}, 
-                              title='CLAIM PAYOUT RANGE (including empty ranges)')
+                              title='CLAIM PAYOUT RANGE')
     else:
         df_counts = df['Amount Range'].value_counts().reindex(labels, fill_value=0)
         chart = px.bar(x=df_counts.index, y=df_counts.values, 
-                        title='CLAIM PAYOUT RANGE (excluding empty ranges)')
+                        title='CLAIM PAYOUT RANGE')
     
     chart.update_yaxes(title='Number of Claims')
+    chart.update_xaxes(title='Amount Range')    
     return chart
 
 
