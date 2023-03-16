@@ -93,7 +93,11 @@ if uploaded_file is not None:
         st.plotly_chart(chart_month(df))
         max_month = df['Month'].mode()[0]
         count_max_month = df['Month'].value_counts()[max_month]
-        st.write(f"The month with the most claims is **{max_month}**, with **{count_max_month}** claims.")
+        if len(max_month) == 1:
+            st.write(f"The month with the most claims is **{max_month[0]}**, with **{count_max_month}** claims.")
+        else:
+            st.write(f"There are multiple months with the most claims: {', '.join(max_month)}, each with **{count_max_month}** claims.")
+
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
