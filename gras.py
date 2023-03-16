@@ -51,6 +51,7 @@ def chart_day(df):
     chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group', 
                    title='Top 3 Claim Types by Day of Week')
     chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
+    chart.update_yaxes(title='Number of Claims')
     return chart
 
 def chart_amountpaid(df):
@@ -58,15 +59,18 @@ def chart_amountpaid(df):
     labels = ['1 - 50K', '50K - 100K', '100K - 500K', '500K - 1M', '1M - 5M', 'Over 5M']
     df['Amount Range'] = pd.cut(df['Amount Paid'], bins=bins, labels=labels)
     chart = px.histogram(df, x='Amount Range', color='Amount Range', title = 'CLAIM PAYOUT RANGE')
+    chart.update_yaxes(title='Number of Claims')
     return chart
 
 
 def chart_month(df):
     chart = px.histogram(df, x='Month', color='Month', category_orders={'Month': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']})
+    chart.update_yaxes(title='Number of Claims')
     return chart
 
 def chart_year(df):
     chart = px.histogram(df, x='Year', color='Year')
+    chart.update_yaxes(title='Number of Claims')
     return chart
 
 
