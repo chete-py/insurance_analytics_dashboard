@@ -54,13 +54,27 @@ def chart_day(df):
     chart.update_yaxes(title='Number of Claims')
     return chart
 
-def chart_amountpaid(df):
+import pandas as pd
+import numpy as np
+import plotly.express as px
+
+def chart_amountpaid(df, include_empty_ranges=True):
     bins = [-0.1, 0, 50000, 100000, 500000, 1000000, 5000000, np.inf]
     labels = ['NIL', '1 - 50K', '50K - 100K', '100K - 500K', '500K - 1M', '1M - 5M', 'Over 5M']
     df['Amount Range'] = pd.cut(df['Amount Paid'], bins=bins, labels=labels)
-    chart = px.histogram(df, x='Amount Range', color='Amount Range', category_orders={'Amount Range': labels}, title = 'CLAIM PAYOUT RANGE')
+    
+    if include_empty_ranges:
+        chart = px.histogram(df, x='Amount Range', color='Amount Range', 
+                              category_orders={'Amount Range': labels}, 
+                              title='CLAIM PAYOUT RANGE (including empty ranges)')
+    else:
+        df_counts = df['Amount Range'].value_counts().reindex(labels, fill_value=0)
+        chart = px.bar(x=df_counts.index, y=df_counts.values, 
+                        title='CLAIM PAYOUT RANGE (excluding empty ranges)')
+    
     chart.update_yaxes(title='Number of Claims')
     return chart
+
 
 def chart_month(df):
     chart = px.histogram(df, x='Month', color='Month', category_orders={'Month': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']})
@@ -107,7 +121,7 @@ if uploaded_file is not None:
 
         
     elif chart_select == "Amount Paid Analysis":
-        st.plotly_chart(chart_amountpaid(df))
+        st.plotly_chart(chart_amountpaid(df, include_empty_ranges=False))
         no_pay_claims = len(df[df['Amount Paid'] == 0])
 
         # Add sentence to describe claims with no amount paid
