@@ -38,13 +38,7 @@ if uploaded_file is not None:
         df.loc[mask, 'Claim Type'] = 'WIBA'
 
         df['Frequency'] = np.bool_(1)
-        
-        # Create a new column with 3-hour time intervals
-        df['Time Interval'] = pd.cut(df['Loss Date'].dt.hour, bins=8, labels=["00-03", "03-06", "06-09", "09-12", "12-15", "15-18", "18-21", "21-00"], include_lowest=True)
-
-        # Select desired columns
-        df = df.loc[:, ['Loss Date', 'Time Interval', 'Claim Type']]
-        
+               
           
     except Exception as e:
         st.write("Error:", e)
