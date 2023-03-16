@@ -69,7 +69,8 @@ def chart_month(df):
     return chart
 
 def chart_year(df):
-    chart = px.bar(df, x='Year', y = 'Frequency', color='Year')
+    freq = df.groupby('Year').size().reset_index(name='Frequency')
+    chart = px.bar(freq, x='Year', y='Frequency')
     chart.update_layout(xaxis={'dtick': 1})
     chart.update_yaxes(title='Number of Claims')
     return chart
