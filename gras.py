@@ -55,7 +55,7 @@ def chart_day(df):
 
 def chart_amountpaid(df):
     bins = [0, 50000, 100000, 500000, 1000000, 5000000, np.inf]
-    labels = ['1-50,000', '50,000-100,000', '100,000-500,000', '500,000-1,000,000', '1,000,000-5,000,000', 'Over 5,000,000']
+    labels = ['1 - 50K', '50K - 100K', '100K - 500K', '500K - 1M', '1M - 5M', 'Over 5M']
     df['Amount Range'] = pd.cut(df['Amount Paid'], bins=bins, labels=labels)
     chart = px.histogram(df, x='Amount Range', color='Amount Range')
     return chart
