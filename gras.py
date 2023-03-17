@@ -134,7 +134,7 @@ if uploaded_file is not None:
         
     elif chart_select == "Top 5 Claim Payouts":
         # Get top 3 claim payouts
-        top_payouts = df.nlargest(5, 'Amount Paid')
+        top_payouts = df.nlargest(5, 'Claim reserve amount')
 
         # Select desired columns
         top_payouts = top_payouts.loc[:, ['Claim No', 'Claim Type', 'Insurer', 'Loss Date', 'Claim reserve amount', 'Amount Paid']]
