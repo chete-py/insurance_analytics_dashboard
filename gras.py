@@ -111,8 +111,8 @@ def chart_year(df):
     fig.update_yaxes(title_text='Amount', secondary_y=True)
 
     # Create the markdown text
-    text = f"The year with the highest number of claims is {max_count_year}. "
-    text += f"The year with the highest payout is {max_amount_year}. "
+    text = f"The year with the highest number of claims is {max_count_year} "
+    text += f" while the year with the highest payout is {max_amount_year}. "
     text += f"It is also worth noting the effect of the highest claim paid that fell in {max_payment_year}."
 
     # Display the chart and the markdown text
