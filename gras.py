@@ -95,16 +95,16 @@ def chart_year(df):
     max_payment_year = df.loc[df['Claim reserve amount'].idxmax(), 'Year']
 
     # Create the chart with two y-axes
-    fig = make_subplots(specs=[[{"secondary_y": True}]])
-    fig.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Claims Count'), secondary_y=False)
-    fig.add_trace(go.Scatter(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
+    chart = make_subplots(specs=[[{"secondary_y": True}]])
+    chart.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Claims Count'), secondary_y=False)
+    chart.add_trace(go.Scatter(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
 
     # Update the layout
-    fig.update_layout(title='Claims by Year',
+    chart.update_layout(title='Claims by Year',
                       xaxis_title='Year',
                       hovermode='x')
-    fig.update_yaxes(title_text='Claims Count', secondary_y=False)
-    fig.update_yaxes(title_text='Amount', secondary_y=True)
+    chart.update_yaxes(title_text='Claims Count', secondary_y=False)
+    chart.update_yaxes(title_text='Amount', secondary_y=True)
 
     # Create the markdown text
     text = f"The year with the highest number of claims is {int(max_count_year)} "
@@ -114,7 +114,7 @@ def chart_year(df):
 
 
     # Display the chart and the markdown text
-    st.plotly_chart(fig)
+    return chart
     st.markdown(text)
      
 
