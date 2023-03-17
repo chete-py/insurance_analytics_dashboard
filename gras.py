@@ -109,7 +109,7 @@ def chart_year(df):
     # Create the markdown text
     text = f"The year with the highest number of claims is {int(max_count_year)} "
     text += f" while the year with the highest payout is {int(max_amount_year)}. "
-    text += f"It is also worth noting the effect of the highest claim paid that fell in {int(max_payment_year)}."
+    text += f"It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}."
 
     # Display the chart and the markdown text
     st.plotly_chart(fig)
