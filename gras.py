@@ -107,9 +107,8 @@ def chart_year(df):
     fig.update_yaxes(title_text='Amount', secondary_y=True)
 
     # Create the markdown text
-    text = f"The year with the highest number of claims is {int(max_count_year)} "
-    text += f" while the year with the highest payout is {int(max_amount_year)}. "
-    text += f"It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}."
+   text = f"The year with the highest number of claims is {agg_df.loc[agg_df['Number of Claims'].idxmax(), 'Year']}, with {agg_df['Number of Claims'].max()} claims.\nThe year with the highest claim reserve amount is {agg_df.loc[agg_df['Claim reserve amount'].idxmax(), 'Year']}, with KES {agg_df['Claim reserve amount'].max():,.2f} reserved.\nThe year with the highest claim payment is {max_payment_year}, with KES {df.loc[df['Claim reserve amount'].idxmax(), 'Claim reserve amount']:,.2f} paid out."
+
 
     # Display the chart and the markdown text
     st.plotly_chart(fig)
