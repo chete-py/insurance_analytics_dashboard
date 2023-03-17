@@ -141,7 +141,7 @@ if uploaded_file is not None:
 
         
     elif chart_select == "Yearly Claim Analysis":
-        st.plotly_chart(fig)       
+        st.plotly_chart(chart_year(df))       
         
         
     elif chart_select == "View Data Frame":
