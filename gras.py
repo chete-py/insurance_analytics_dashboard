@@ -89,15 +89,7 @@ def chart_year(df):
     agg_df = df.groupby('Year').agg({'Claim reserve amount': 'sum', 'Claim No': 'count'}).reset_index()
     agg_df = agg_df.rename(columns={'Claim No': 'Number of Claims'})
 
-    # Find the year with the highest number of claims
-    max_count_year = agg_df.loc[agg_df['Number of Claims'].idxmax(), 'Year']
-
-    # Find the year with the highest claim reserve amount
-    max_amount_year = agg_df.loc[agg_df['Claim reserve amount'].idxmax(), 'Year']
-
-    # Find the year with the highest claim payment
-    max_payment_year = df.loc[df['Claim reserve amount'].idxmax(), 'Year']
-
+    
     # Create the chart with two y-axes
     fig = make_subplots(specs=[[{"secondary_y": True}]])
     fig.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Claims Count'), secondary_y=False)
@@ -143,6 +135,15 @@ if uploaded_file is not None:
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
+        # Find the year with the highest number of claims
+        max_count_year = agg_df.loc[agg_df['Number of Claims'].idxmax(), 'Year']
+
+    # Find the year with the highest claim reserve amount
+        max_amount_year = agg_df.loc[agg_df['Claim reserve amount'].idxmax(), 'Year']
+
+    # Find the year with the highest claim payment
+        max_payment_year = df.loc[df['Claim reserve amount'].idxmax(), 'Year']
+
         # Create the markdown text
         text = f"The year with the highest number of claims is {max_count_year}. "
         text += f"The year with the highest payout is {max_amount_year}. "
