@@ -1,5 +1,7 @@
 import streamlit as st
 import plotly_express as px
+import plotly.graph_objs as go
+from plotly.subplots import make_subplots
 import numpy as np
 import pandas as pd
 from datetime import datetime
@@ -90,7 +92,7 @@ def chart_year(df):
     # Create the chart with two y-axes
     chart = make_subplots(specs=[[{"secondary_y": True}]])
     chart.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Number of Claims'), secondary_y=False)
-    chart.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
+    chart.add_trace(go.Scatter(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
 
     # Update the layout
     chart.update_layout(title='Claims by Year',
@@ -100,7 +102,6 @@ def chart_year(df):
                         legend=dict(x=0.1, y=1.1, orientation='h'),
                         hovermode='x')
     return chart
-
 
 
 
