@@ -93,12 +93,6 @@ def chart_year(df):
 
         # Find the year with the highest claim payment
     max_payment_year = df.loc[df['Claim reserve amount'].idxmax(), 'Year']
-        
-        # Create the markdown text
-    text = f"The year with the highest number of claims is {int(max_count_year)} "
-    text += f" while the year with the highest payout is {int(max_amount_year)}. "
-    text += f"It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}."
-
     
     # Create the chart with two y-axes
     chart = make_subplots(specs=[[{"secondary_y": True}]])
@@ -115,7 +109,7 @@ def chart_year(df):
     
     # Display the chart and the markdown text
     return chart
-    st.write(text)
+    
     
      
 # Define chart selection dropdown
@@ -142,7 +136,13 @@ if uploaded_file is not None:
 
         
     elif chart_select == "Yearly Claim Analysis":
-        st.plotly_chart(chart_year(df))   
+        st.plotly_chart(chart_year(df)) 
+          # Create the markdown text
+        text = f"The year with the highest number of claims is {int(max_count_year)} "
+        text += f" while the year with the highest payout is {int(max_amount_year)}. "
+        text += f"It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}."
+        st.write(text)       
+
        
         
     elif chart_select == "View Data Frame":
