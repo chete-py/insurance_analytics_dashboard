@@ -83,11 +83,24 @@ def chart_month(df):
     return chart
 
 def chart_year(df):
-    freq = df.groupby('Year').size().reset_index(name='Frequency')
-    chart = px.bar(freq, x='Year', y='Frequency')
-    chart.update_layout(xaxis={'dtick': 1})
-    chart.update_yaxes(title='Number of Claims')
+    # Group by year and calculate the sum of Amount Paid and count of claims
+    agg_df = df.groupby('Year').agg({'Claim reserve amount': 'sum', 'Claim Number': 'count'}).reset_index()
+    agg_df = agg_df.rename(columns={'Claim Number': 'Number of Claims'})
+    
+    # Create the chart with two y-axes
+    chart = make_subplots(specs=[[{"secondary_y": True}]])
+    chart.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Number of Claims'), secondary_y=False)
+    chart.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
+
+    # Update the layout
+    chart.update_layout(title='Claims by Year',
+                        xaxis_title='Year',
+                        yaxis_title='Number of Claims',
+                        yaxis2_title='Amount',
+                        legend=dict(x=0.1, y=1.1, orientation='h'),
+                        hovermode='x')
     return chart
+
 
 
 
