@@ -56,10 +56,6 @@ def chart_day(df):
     chart.update_yaxes(title='Number of Claims')
     return chart
 
-import pandas as pd
-import numpy as np
-import plotly.express as px
-
 def chart_amountpaid(df, include_empty_ranges=True):
     bins = [-0.1, 0, 50000, 100000, 500000, 1000000, 5000000, np.inf]
     labels = ['NIL', '1 - 50K', '50K - 100K', '100K - 500K', '500K - 1M', '1M - 5M', 'Over 5M']
@@ -116,7 +112,7 @@ def chart_year(df):
     text += f"It is also worth noting the effect of the highest claim paid that fell in {max_payment_year}."
 
     # Display the chart and the markdown text
-    st.plotly_chart(fig)
+    return fig
     st.markdown(text)   
 
 
