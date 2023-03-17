@@ -88,7 +88,7 @@ def chart_year(df):
     # Group by year and calculate the sum of Amount Paid and count of claims
     agg_df = df.groupby('Year').agg({'Claim reserve amount': 'sum', 'Claim Number': 'count'}).reset_index()
     agg_df = agg_df.rename(columns={'Claim Number': 'Number of Claims'})
-    
+
     # Create the chart with two y-axes
     chart = make_subplots(specs=[[{"secondary_y": True}]])
     chart.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Number of Claims'), secondary_y=False)
@@ -96,11 +96,11 @@ def chart_year(df):
 
     # Update the layout
     chart.update_layout(title='Claims by Year',
-                        xaxis_title='Year',
-                        yaxis_title='Number of Claims',
-                        yaxis2_title='Amount',
-                        legend=dict(x=0.1, y=1.1, orientation='h'),
-                        hovermode='x')
+                      xaxis_title='Year',
+                      yaxis_title='Number of Claims',
+                      yaxis2_title='Amount',
+                      legend=dict(x=0.1, y=1.1, orientation='h'),
+                      hovermode='x')
     return chart
 
 
