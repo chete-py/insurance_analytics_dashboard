@@ -84,34 +84,39 @@ def chart_year(df):
     # Group by year and calculate the sum of Claim reserve amount and count of claims
     agg_df = df.groupby('Year').agg({'Claim reserve amount': 'sum', 'Claim No': 'count'}).reset_index()
     agg_df = agg_df.rename(columns={'Claim No': 'Number of Claims'})
-    
-     # Find the year with the highest number of claims
+
+    # Find the year with the highest number of claims
     max_count_year = agg_df.loc[agg_df['Number of Claims'].idxmax(), 'Year']
 
-        # Find the year with the highest claim reserve amount
+    # Find the year with the highest claim reserve amount
     max_amount_year = agg_df.loc[agg_df['Claim reserve amount'].idxmax(), 'Year']
 
-        # Find the year with the highest claim payment
+    # Find the year with the highest claim payment
     max_payment_year = df.loc[df['Claim reserve amount'].idxmax(), 'Year']
-    
+
     # Create the chart with two y-axes
-    chart = make_subplots(specs=[[{"secondary_y": True}]])
-    chart.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Claims Count'), secondary_y=False)
-    chart.add_trace(go.Scatter(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
+    fig = make_subplots(specs=[[{"secondary_y": True}]])
+    fig.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Claims Count'), secondary_y=False)
+    fig.add_trace(go.Scatter(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
 
     # Update the layout
-    chart.update_layout(title='Claims by Year',
+    fig.update_layout(title='Claims by Year',
                       xaxis_title='Year',
                       hovermode='x')
-    chart.update_yaxes(title_text='Claims Count', secondary_y=False)
-    chart.update_yaxes(title_text='Amount', secondary_y=True)
+    fig.update_yaxes(title_text='Claims Count', secondary_y=False)
+    fig.update_yaxes(title_text='Amount', secondary_y=True)
 
-    
+    # Create the markdown text
+    text = f"The year with the highest number of claims is {int(max_count_year)} "
+    text += f" while the year with the highest payout is {int(max_amount_year)}. "
+    text += f"It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}."
+
     # Display the chart and the markdown text
-    return chart
-    
-    
+    st.plotly_chart(fig)
+    st.markdown(text)
      
+
+
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
@@ -136,14 +141,8 @@ if uploaded_file is not None:
 
         
     elif chart_select == "Yearly Claim Analysis":
-        st.plotly_chart(chart_year(df)) 
-          # Create the markdown text
-        text = f"The year with the highest number of claims is {int(max_count_year)} "
-        text += f" while the year with the highest payout is {int(max_amount_year)}. "
-        text += f"It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}."
-        st.write(text)       
-
-       
+        st.plotly_chart(chart_year(df))       
+        
         
     elif chart_select == "View Data Frame":
         # st.write(df)
