@@ -91,15 +91,15 @@ def chart_year(df):
 
     # Create the chart with two y-axes
     fig = make_subplots(specs=[[{"secondary_y": True}]])
-    fig.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Number of Claims'), secondary_y=False)
-    fig.add_trace(go.Scatter(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Claim reserve amount'), secondary_y=True)
+    fig.add_trace(go.Bar(x=agg_df['Year'], y=agg_df['Number of Claims'], name='Claims Count'), secondary_y=False)
+    fig.add_trace(go.Scatter(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
 
     # Update the layout
     fig.update_layout(title='Claims by Year',
                       xaxis_title='Year',
                       hovermode='x')
-    fig.update_yaxes(title_text='Number of Claims', secondary_y=False)
-    fig.update_yaxes(title_text='Claim reserve amount', secondary_y=True)
+    fig.update_yaxes(title_text='Claims Count', secondary_y=False)
+    fig.update_yaxes(title_text='Amount', secondary_y=True)
 
     return fig
 
