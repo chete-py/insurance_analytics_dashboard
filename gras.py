@@ -117,8 +117,6 @@ def chart_year(df):
 
     # Display the chart and the markdown text
     st.plotly_chart(fig)
-    st.markdown(text)
-
     
 
 
