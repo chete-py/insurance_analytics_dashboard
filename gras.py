@@ -115,6 +115,7 @@ def chart_year(df):
     
     # Display the chart and the markdown text
     return chart
+    st.write(text)
     
      
 # Define chart selection dropdown
@@ -142,7 +143,7 @@ if uploaded_file is not None:
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))   
-        st.write(text)
+       
         
     elif chart_select == "View Data Frame":
         # st.write(df)
