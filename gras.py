@@ -87,7 +87,7 @@ def chart_month(df):
 def chart_year(df):
     # Group by year and calculate the sum of Claim reserve amount and count of claims
     agg_df = df.groupby('Year').agg({'Claim reserve amount': 'sum', 'Claim Number': 'count'}).reset_index()
-    agg_df = agg_df.rename(columns={'Claim Number': 'Number of Claims'})
+    agg_df = agg_df.rename(columns={'Claim No': 'Number of Claims'})
 
     # Create the chart with two y-axes
     fig = make_subplots(specs=[[{"secondary_y": True}]])
