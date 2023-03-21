@@ -100,7 +100,7 @@ def chart_year(df):
     fig.add_trace(go.Scatter(x=agg_df['Year'], y=agg_df['Claim reserve amount'], name='Amount'), secondary_y=True)
 
     # Update the layout
-    fig.update_layout(title='Claims by Year',
+    fig.update_layout(title='Comparison Of Annual Number of Claims And Annual Claim Amount',
                       xaxis_title='Year',
                       hovermode='x')
     fig.update_yaxes(title_text='Claims Count', secondary_y=False)
