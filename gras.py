@@ -64,11 +64,11 @@ def chart_amountpaid(df, include_empty_ranges=True):
     if include_empty_ranges:
         chart = px.histogram(df, x='Amount Range', color='Amount Range', 
                               category_orders={'Amount Range': labels}, 
-                              title='CLAIM PAYOUT RANGE')
+                              title='Distribution of Claims Recorded by Amount Paid')
     else:
         df_counts = df['Amount Range'].value_counts().reindex(labels, fill_value=0)
         chart = px.bar(x=df_counts.index, y=df_counts.values, 
-                        title='CLAIM PAYOUT RANGE')
+                        title='Distribution of Claims Recorded by Amount Paid')
     
     chart.update_yaxes(title='Number of Claims')
     chart.update_xaxes(title='Amount Range')    
@@ -164,7 +164,7 @@ if uploaded_file is not None:
         top_payouts = df.nlargest(5, 'Claim reserve amount')
 
         # Select desired columns
-        top_payouts = top_payouts.loc[:, ['Claim No', 'Claim Type', 'Insurer', 'Loss Date', 'Claim reserve amount', 'Amount Paid']]
+        top_payouts = top_payouts.loc[:, ['Claim Type', 'Loss Date', 'Claim reserve amount', 'Amount Paid']]
 
        
         # Display styled table
