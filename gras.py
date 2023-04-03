@@ -10,10 +10,10 @@ from datetime import datetime
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # title of the app
-st.title("Client Claims Analytics ")
+st.title("Insurance Claims Analytics ")
 
 # Add a sidebar
-st.sidebar.image('graslogo.jpg', use_column_width=True)
+st.sidebar.image('claimslogo.jpg', use_column_width=True)
 st.sidebar.subheader("Visualization Settings")
 
 # Setup file upload
