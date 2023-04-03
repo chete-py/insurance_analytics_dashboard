@@ -10,7 +10,7 @@ from datetime import datetime
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # title of the app
-st.title("Gras Savoye Client Claims Analytics ")
+st.title("Client Claims Analytics ")
 
 # Add a sidebar
 st.sidebar.image('graslogo.jpg', use_column_width=True)
