@@ -22,7 +22,7 @@ st.sidebar.subheader("Visualization Settings")
 demo_file = pd.read_csv('demo_file.csv')
 csv = demo_file.to_csv(index=False)
 b64 = base64.b64encode(csv.encode()).decode()
-href = f'<a href="data:file/csv;base64,{b64}" download="demo_file.csv">Download Demo CSV File</a>'
+href = f'<a href="data:file/csv;base64,{b64}" download="demo_file.csv">Download Demo Claims Data</a>'
 st.sidebar.markdown(href, unsafe_allow_html=True)
 
 # Setup file upload
