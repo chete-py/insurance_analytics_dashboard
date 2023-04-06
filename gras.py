@@ -23,22 +23,22 @@ uploaded_file = st.sidebar.file_uploader(
     type=['csv', 'xlsx', 'xls']
 )
 
-# Add a downloadable demo CSV file
-demo_df = pd.read_csv("demo.csv") # replace demo.csv with the name of your demo file
-
-# Create a download button
-csv = demo_df.to_csv(index=False)
-b64 = base64.b64encode(csv.encode()).decode()
-href = f'<a href="data:file/csv;base64,{b64}" download="demo.csv">Download Demo file</a>'
-st.markdown(href, unsafe_allow_html=True)
-
-
 if uploaded_file is not None:
     try:
         if uploaded_file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
             df = pd.read_excel(uploaded_file, header=8)
         elif uploaded_file.type == "text/csv":
             df = pd.read_csv(uploaded_file, header=8)
+            
+            
+        # Add a downloadable demo CSV file
+        demo_df = pd.read_csv("demo.csv") # replace demo.csv with the name of your demo file
+
+        # Create a download button
+        csv = demo_df.to_csv(index=False)
+        b64 = base64.b64encode(csv.encode()).decode()
+        href = f'<a href="data:file/csv;base64,{b64}" download="demo.csv">Download Demo CSV file</a>'
+        st.markdown(href, unsafe_allow_html=True)
               
 
         # convert date column to month name
