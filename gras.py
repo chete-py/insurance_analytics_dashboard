@@ -22,6 +22,18 @@ uploaded_file = st.sidebar.file_uploader(
     type=['csv', 'xlsx', 'xls']
 )
 
+# Add a button to download demo file
+demo_file = pd.read_excel('demo_file.xlsx')
+
+def download_demo_file():
+    csv = demo_file.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()
+    href = f'<a href="data:file/csv;base64,{b64}" download="demo_file.csv">Download demo file</a>'
+    return href
+
+st.markdown(download_demo_file(), unsafe_allow_html=True)
+
+
 if uploaded_file is not None:
     try:
         if uploaded_file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
