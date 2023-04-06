@@ -32,12 +32,12 @@ if uploaded_file is not None:
             
             
         # Add a downloadable demo CSV file
-        demo_df = pd.read_csv("demo.csv") # replace demo.csv with the name of your demo file
+        demo_df = pd.read_csv("demo_file.csv") # replace demo.csv with the name of your demo file
 
         # Create a download button
         csv = demo_df.to_csv(index=False)
         b64 = base64.b64encode(csv.encode()).decode()
-        href = f'<a href="data:file/csv;base64,{b64}" download="demo.csv">Download Demo CSV file</a>'
+        href = f'<a href="data:file/csv;base64,{b64}" download="demo_file.csv">Download Demo CSV file</a>'
         st.markdown(href, unsafe_allow_html=True)
               
 
