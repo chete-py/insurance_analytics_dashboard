@@ -5,6 +5,7 @@ from plotly.subplots import make_subplots
 import numpy as np
 import pandas as pd
 from datetime import datetime
+import base64
 
 # configuration
 st.set_option('deprecation.showfileUploaderEncoding', False)
