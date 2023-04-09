@@ -167,6 +167,11 @@ if uploaded_file is not None:
         
     elif chart_select == "Time of Loss Analysis":
         st.plotly_chart(chart_time(df))
+        # Calculate number of missing times
+        missing_times = df[df['Time of Loss'] == '00:00:01'].shape[0]
+
+        # Display text under graph
+        st.write(f"Number of missing times: {missing_times}")
                   
     elif chart_select == "Brief Description of Data Frame":
         # st.write(df)
