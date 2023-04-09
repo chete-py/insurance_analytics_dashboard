@@ -50,14 +50,15 @@ if uploaded_file is not None:
 
         df['Frequency'] = np.bool_(1)
         
-        # Convert time column to datetime
-        df['Time of Loss'] = pd.to_datetime(df['Time of Loss'])
+        # convert timestamp to datetime
+        df['timestamp'] = pd.to_datetime(df['Time of Loss'])
 
-        # Group time column into 3-hour intervals
-        df['time_group'] = df['Time of Loss'].dt.floor('3H')
+        # group by 3-hour intervals
+        df['time_interval'] = pd.cut(df['timestamp'].dt.hour + df['timestamp'].dt.minute/60, 
+                                     bins=np.arange(0, 24.01, 3), 
+                                     labels=[f"{i:02d}:00-{i+2:02d}:59" for i in range(0, 24, 3)])
+        grouped_data = df.groupby('time_interval').size().reset_index(name='count')
 
-        # Count occurrences in each time group
-        time_counts = df['time_group'].value_counts()
                
           
     except Exception as e:
@@ -75,11 +76,10 @@ def chart_day(df):
     return chart
 
 def chart_time(df):
-    # Create time plot
-    df = df[~df["Time of Loss"].str.contains("00:00:01")]
-    df["hour"] = pd.to_datetime(df["Time of Loss"]).dt.hour
-    counts = df.groupby(pd.cut(df["hour"], bins=range(0, 25, 3))).size().reset_index(name="counts")
-    chart = px.bar(counts, x="hour", y="counts", labels={"hour": "Time (hours)", "counts": "Count"})
+    # plot the bar chart
+    chart = px.bar(grouped_data, x='time_interval', y='count', 
+                     labels={'time_interval': 'Time Interval', 'count': 'Count'})
+    chart.update_layout(title_text='Claims by Time Interval')        
     return chart
 
 def chart_amountpaid(df, include_empty_ranges=True):
