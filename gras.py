@@ -49,6 +49,15 @@ if uploaded_file is not None:
         df.loc[mask, 'Claim Type'] = 'WIBA'
 
         df['Frequency'] = np.bool_(1)
+        
+        # Convert time column to datetime
+        df['Time of Loss'] = pd.to_datetime(df['Time of Loss'])
+
+        # Group time column into 3-hour intervals
+        df['time_group'] = df['Time of Loss'].dt.floor('3H')
+
+        # Count occurrences in each time group
+        time_counts = df['time_group'].value_counts()
                
           
     except Exception as e:
@@ -62,6 +71,13 @@ def chart_day(df):
     chart = px.bar(top_claims, x='Day', y='count', color='Claim Type', barmode='group', 
                    title='Top 3 Insurance Class Claims On Specific Day Of Week')
     chart.update_layout(legend=dict(orientation='v', font=dict(size=8)))
+    chart.update_yaxes(title='Number of Claims')
+    return chart
+
+def chart_time(df):
+    # Create time plot
+    chart = px.line(x=time_counts.index, y=time_counts.values, title='Claims by Time Group')
+    chart.update_xaxes(title='Time Group')
     chart.update_yaxes(title='Number of Claims')
     return chart
 
@@ -125,7 +141,7 @@ def chart_year(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Brief Description of Data Frame", "Top 5 Claim Payouts", "Amount Paid Analysis", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
+            options=["Brief Description of Data Frame", "Top 5 Claim Payouts", "Amount Paid Analysis", "Time of Loss Analysis", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
@@ -147,8 +163,10 @@ if uploaded_file is not None:
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
-          
         
+    elif chart_select == "Time of Loss Analysis":
+        st.plotly_chart(chart_time(df))
+                  
     elif chart_select == "Brief Description of Data Frame":
         # st.write(df)
         num_claims = len(df["Claim No"])
