@@ -152,7 +152,10 @@ if uploaded_file is not None:
 
         
     elif chart_select == "Yearly Claim Analysis":
-        st.plotly_chart(chart_year(df))       
+        st.plotly_chart(chart_year(df))  
+        st.write( f"The year with the highest number of claims is {int(max_count_year)}" 
+             f" while the year with the highest payout is {int(max_amount_year)}."
+             f" It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}.")
         
         
     elif chart_select == "Brief Description of Data Frame":
