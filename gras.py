@@ -79,7 +79,7 @@ def chart_time(df):
     # plot the bar chart
     chart = px.bar(grouped_data, x='time_interval', y='count', 
                      labels={'time_interval': 'Time Interval', 'count': 'Count'})
-    chart.update_layout(title_text='Claims by Time Interval')        
+    chart.update_layout(title_text='Analysis of Claims By Time Of Occurence')        
     return chart
 
 def chart_amountpaid(df, include_empty_ranges=True):
