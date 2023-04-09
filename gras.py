@@ -76,9 +76,10 @@ def chart_day(df):
 
 def chart_time(df):
     # Create time plot
-    chart = px.line(x=time_counts.index, y=time_counts.values, title='Claims by Time Group')
-    chart.update_xaxes(title='Time Group')
-    chart.update_yaxes(title='Number of Claims')
+    df = df[~df["time"].str.contains("00:00:01")]
+    df["hour"] = pd.to_datetime(df["time"]).dt.hour
+    counts = df.groupby(pd.cut(df["hour"], bins=range(0, 25, 3))).size().reset_index(name="counts")
+    chart = px.bar(counts, x="hour", y="counts", labels={"hour": "Time (hours)", "counts": "Count"})
     return chart
 
 def chart_amountpaid(df, include_empty_ranges=True):
