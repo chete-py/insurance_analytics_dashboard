@@ -103,17 +103,10 @@ def chart_year(df):
     chart.update_yaxes(title_text='Claims Count', secondary_y=False)
     chart.update_yaxes(title_text='Amount', secondary_y=True)
 
-    # Create the markdown text
-    text = f"The year with the highest number of claims is {int(max_count_year)} "
-    text += f" while the year with the highest payout is {int(max_amount_year)}. "
-    text += f"It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}."
-
+   
     # Display the chart and the markdown text
     return chart
-    st.write( f"The year with the highest number of claims is {int(max_count_year)}" 
-             f" while the year with the highest payout is {int(max_amount_year)}."
-             f" It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}.")
-       
+    
 
 
 # Define chart selection dropdown
@@ -141,22 +134,7 @@ if uploaded_file is not None:
         
     elif chart_select == "Yearly Claim Analysis":
         st.plotly_chart(chart_year(df))
-            # Group by year and calculate the sum of Claim reserve amount and count of claims
-        agg_df = df.groupby('Year').agg({'Claim reserve amount': 'sum', 'Claim No': 'count'}).reset_index()
-        agg_df = agg_df.rename(columns={'Claim No': 'Number of Claims'})
-
-         # Find the year with the highest number of claims
-        max_count_year = agg_df.loc[agg_df['Number of Claims'].idxmax(), 'Year']
-
-        # Find the year with the highest claim reserve amount
-        max_amount_year = agg_df.loc[agg_df['Claim reserve amount'].idxmax(), 'Year']
-
-        # Find the year with the highest claim payment
-        max_payment_year = df.loc[df['Claim reserve amount'].idxmax(), 'Year']
-        st.write( f"The year with the highest number of claims is {int(max_count_year)}" 
-             f" while the year with the highest payout is {int(max_amount_year)}."
-             f" It is also worth noting the effect of the highest single claim paid that occured in {int(max_payment_year)}.")
-        
+          
         
     elif chart_select == "Brief Description of Data Frame":
         # st.write(df)
