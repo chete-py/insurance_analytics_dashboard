@@ -90,6 +90,19 @@ def chart_month(df):
     return chart
 
 def chart_year(df):  
+      # Group by year and calculate the sum of Claim reserve amount and count of claims
+        agg_df = df.groupby('Year').agg({'Claim reserve amount': 'sum', 'Claim No': 'count'}).reset_index()
+        agg_df = agg_df.rename(columns={'Claim No': 'Number of Claims'})
+
+         # Find the year with the highest number of claims
+        max_count_year = agg_df.loc[agg_df['Number of Claims'].idxmax(), 'Year']
+
+        # Find the year with the highest claim reserve amount
+        max_amount_year = agg_df.loc[agg_df['Claim reserve amount'].idxmax(), 'Year']
+
+        # Find the year with the highest claim payment
+        max_payment_year = df.loc[df['Claim reserve amount'].idxmax(), 'Year']
+               
 
     # Create the chart with two y-axes
     chart = make_subplots(specs=[[{"secondary_y": True}]])
