@@ -76,8 +76,8 @@ def chart_day(df):
 
 def chart_time(df):
     # Create time plot
-    df = df[~df["time"].str.contains("00:00:01")]
-    df["hour"] = pd.to_datetime(df["time"]).dt.hour
+    df = df[~df["Time of Loss"].str.contains("00:00:01")]
+    df["hour"] = pd.to_datetime(df["Time of Loss"]).dt.hour
     counts = df.groupby(pd.cut(df["hour"], bins=range(0, 25, 3))).size().reset_index(name="counts")
     chart = px.bar(counts, x="hour", y="counts", labels={"hour": "Time (hours)", "counts": "Count"})
     return chart
