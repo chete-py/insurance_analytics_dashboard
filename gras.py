@@ -19,10 +19,10 @@ st.sidebar.subheader("Visualization Settings")
 
 
 # Add demo file download link
-demo_file = pd.read_csv('demo_data.csv')
-csv = demo_file.to_csv(index=False)
+demo_data = pd.read_csv('demo_data.csv')
+csv = demo_data.to_csv(index=False)
 b64 = base64.b64encode(csv.encode()).decode()
-href = f'<a href="data:file/csv;base64,{b64}" download="demo_file.csv">Download Demo Claims Data</a>'
+href = f'<a href="data:file/csv;base64,{b64}" download="demo_data.csv">Download Demo Claims Data</a>'
 st.sidebar.markdown(href, unsafe_allow_html=True)
 
 # Setup file upload
