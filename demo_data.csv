@@ -1,0 +1,438 @@
+BROKER,,,,,,,
+Claims Listing,,,,,,,
+Report Date ,,,,,,,
+Claims ,,,,,,,
+Client Name,,,,,,,
+Insurers From,,,,,,,
+Data Frame Period,,,,,,,
+,,,,,,,
+Claim No,Claim Type,Loss Date,Time of Loss,Claim reserve amount,Excess Amount,Amount Paid,Claim Position
+,,,,,,,
+001,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",30/08/2017,20:00:00,0,0,0,Documents Pending
+002,Work Injury Benefits Act Insurance & Employers Liability,18/03/2013,08:16:00,1334,5000,0,Closed - Below Excess
+003,Work Injury Benefits Act Insurance,22/04/2013,12:40:00,330900,0,330900,Judgment Settled
+004,Employer's Liability,26/04/2013,10:40:01,0,0,0,Summons Received
+005,Work Injury Benefits Act Insurance & Employers Liability,22/04/2013,00:00:01,6379,5000,0,Awaiting Discharge Voucher
+006,Work Injury Benefits Act Insurance,02/05/2013,11:30:00,26346.7,5000,21346,Claim Paid and Closed
+007,Work Injury Benefits Act Insurance & Employers Liability,17/05/2013,00:00:01,2262,5000,0,Closed - Below Excess
+008,Work Injury Benefits Act Insurance & Employers Liability,27/06/2013,00:00:01,1334,5000,0,Closed - Below Excess
+009,Work Injury Benefits Act Insurance & Employers Liability,15/07/2013,08:24:00,1333,5000,0,Closed - Below Excess
+010,Group Personal Accident,26/08/2013,10:30:00,269262,0,269262,Claim Paid and Closed
+011,Group Personal Accident,08/08/2013,00:00:01,1112400,0,1112400,Claim Paid and Closed
+012,Work Injury Benefits Act Insurance,25/10/2013,08:30:00,14276,5000,9276,Claim Paid and Closed
+013,Work Injury Benefits Act Insurance,22/11/2013,00:00:01,0,0,0,Matter in Court
+014,Work Injury Benefits Act Insurance & Employers Liability,13/12/2013,11:52:00,0,0,0,Closed - Report Only
+015,Work Injury Benefits Act Insurance & Employers Liability,10/12/2013,00:00:01,1334,5000,0,Closed - Below Excess
+016,Work Injury Benefits Act Insurance & Employers Liability,08/01/2014,12:15:00,1367,5000,0,Closed - Below Excess
+017,WIBA/GPA/EL- APA INSURANCE,20/01/2014,00:00:01,0,0,0,Closed - Report Only
+018,Work Injury Benefits Act Insurance & Employers Liability,19/01/2013,12:00:00,695,0,695,Claim Paid and Closed
+019,Work Injury Benefits Act Insurance & Employers Liability,12/01/2014,08:00:00,65004,5000,60004,Claim Paid and Closed
+020,Work Injury Benefits Act Insurance & Employers Liability,25/01/2014,12:00:00,0,0,0,Closed - Report Only
+021,Public liability,02/01/2014,00:00:01,0,0,106760,Claim Paid and Closed
+022,WIBA/GPA/EL- APA INSURANCE,08/02/2014,00:00:01,1276,5000,0,Closed - Below Excess
+023,WIBA/GPA/EL- APA INSURANCE,26/03/2014,00:00:01,14655,5000,9655,Claim Paid and Closed
+024,WIBA/GPA/EL- APA INSURANCE,22/03/2014,00:00:01,4001,5000,0,Closed - Below Excess
+025,Work Injury Benefits Act Insurance & Employers Liability,19/03/2014,00:00:01,1333,5000,0,Closed - Below Excess
+026,Work Injury Benefits Act Insurance & Employers Liability,19/03/2014,00:00:01,905,5000,0,Claim Paid and Closed
+027,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",11/03/2014,00:00:01,0,0,0,Summons Received
+028,Work Injury Benefits Act Insurance,15/04/2014,13:00:00,0,0,0,Summons Received
+029,Work Injury Benefits Act Insurance,18/05/2014,21:30:00,6227,5000,1227,Claim Paid and Closed
+030,Work Injury Benefits Act Insurance,16/05/2014,13:25:00,0,0,0,Closed - Below Excess
+031,Work Injury Benefits Act Insurance,20/05/2014,06:00:00,0,0,0,Closed - Below Excess
+032,Work Injury Benefits Act Insurance & Group Personal Accident,26/05/2014,09:00:00,0,0,0,Documents Pending
+033,Work Injury Benefits Act Insurance & Employers Liability,26/05/2014,14:00:00,399,0,0,Closed - Below Excess
+034,Motor -  Private Vehicles,16/05/2014,00:00:01,0,58790,0,Repaired and Released
+035,Fire and Perils Insurance,14/05/2014,00:00:01,346186,0,346186,Claim Paid and Closed
+036,Work Injury Benefits Act Insurance & Employers Liability,27/05/2013,00:00:01,0,0,0,Closed - Below Excess
+037,Work Injury Benefits Act Insurance & Employers Liability,22/04/2014,08:00:00,0,0,0,Closed - Report Only
+038,Work Injury Benefits Act Insurance & Employers Liability,26/06/2014,14:30:00,0,0,0,Closed - Below Excess
+039,Work Injury Benefits Act Insurance & Employers Liability,25/06/2014,18:30:00,904.6,5000,0,Closed - Below Excess
+040,Work Injury Benefits Act Insurance,25/06/2014,00:00:01,0,0,0,Summons Received
+041,Travel insurance,02/07/2014,00:00:01,0,0,0,Documents Pending
+042,Work Injury Benefits Act Insurance,26/06/2014,14:30:00,43158,0,43158,Claim Paid and Closed
+043,Work Injury Benefits Act Insurance & Employers Liability,15/07/2014,15:30:00,0,0,0,Closed - Report Only
+044,Work Injury Benefits Act Insurance & Employers Liability,04/07/2014,14:00:00,904.6,5000,0,Closed - Below Excess
+045,Work Injury Benefits Act Insurance & Employers Liability,08/07/2014,00:00:01,0,5000,0,Closed - Below Excess
+046,Work Injury Benefits Act Insurance & Employers Liability,03/07/2014,17:50:00,5500,0,5500,Claim Paid and Closed
+047,Work Injury Benefits Act Insurance & Employers Liability,17/07/2014,06:13:00,0,0,0,Closed - Report Only
+048,Work Injury Benefits Act Insurance & Employers Liability,17/07/2014,06:13:00,0,0,0,Documents Pending
+049,Work Injury Benefits Act Insurance & Employers Liability,08/07/2014,11:30:00,1701,5000,0,Closed - Below Excess
+050,Work Injury Benefits Act Insurance & Employers Liability,09/07/2014,01:00:00,0,0,0,Closed - Report Only
+051,Work Injury Benefits Act Insurance & Employers Liability,31/07/2014,12:00:00,1675,0,1675,Claim Paid and Closed
+052,Travel insurance,01/07/2014,00:00:01,0,0,0,Claim Paid and Closed
+053,Goods In Transit,05/06/2014,00:00:01,181450,20000,161450,Claim Paid and Closed
+054,Work Injury Benefits Act Insurance & Group Personal Accident,24/07/2014,11:30:00,18442.6,0,0,Summons Received
+055,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",24/07/2014,11:30:00,0,0,0,Summons Received
+056,Travel insurance,02/07/2014,00:00:01,526,0,526.86,Claim Paid and Closed
+057,Work Injury Benefits Act Insurance & Employers Liability,06/08/2014,10:00:00,0,0,0,Closed - Report Only
+058,Motor Commercial,11/08/2014,15:00:00,0,0,0,Closed - Report Only
+059,Burglary Insurance,13/08/2014,00:00:01,493000,0,100000,Claim Paid and Closed
+060,Work Injury Benefits Act Insurance,04/08/2014,00:00:01,0,0,0,Summons Received
+061,Employer's Liability,24/08/2014,00:00:01,0,0,0,Closed - Report Only
+062,WIBA/GPA/EL- APA INSURANCE,10/09/2014,10:40:00,0,0,0,Closed - Report Only
+063,Work Injury Benefits Act Insurance,11/09/2014,10:51:00,0,0,0,Closed - Below Excess
+064,Work Injury Benefits Act Insurance,19/08/2014,09:00:00,1675,0,1675,Claim Paid and Closed
+065,Motor -  Private Vehicles,26/08/2014,00:00:01,0,0,348042,Repaired and Released
+066,Burglary Insurance,28/09/2014,00:00:01,231400,21983,197847,Claim Paid and Closed
+067,Goods In Transit,17/09/2014,23:00:00,729595.3,0,0,Documents Pending
+068,Domestic Package,29/09/2014,00:00:01,5500,0,5500,Claim Paid and Closed
+069,Employer's Liability,04/09/2014,00:00:01,0,0,0,Closed - Report Only
+070,Work Injury Benefits Act Insurance & Employers Liability,10/03/2013,00:00:01,3112,5000,0,Closed - Below Excess
+071,Work Injury Benefits Act Insurance & Employers Liability,12/10/2014,16:00:00,3351,0,3351,Claim Paid and Closed
+072,Work Injury Benefits Act Insurance & Employers Liability,24/10/2014,19:00:00,0,0,0,Closed - Below Excess
+073,Work Injury Benefits Act Insurance & Employers Liability,12/10/2014,16:30:00,1379,0,1379,Claim Paid and Closed
+074,Work Injury Benefits Act Insurance & Employers Liability,21/10/2014,12:00:00,0,0,0,Closed - Report Only
+075,Work Injury Benefits Act Insurance & Employers Liability,03/10/2014,09:00:00,0,0,0,Closed - Below Excess
+076,Work Injury Benefits Act Insurance & Employers Liability,03/10/2014,09:00:00,0,0,0,Closed - Below Excess
+077,Work Injury Benefits Act Insurance & Employers Liability,03/10/2014,13:15:00,0,0,0,Closed - Report Only
+078,Work Injury Benefits Act Insurance,30/10/2015,00:00:01,0,0,0,Documents Pending
+079,Work Injury Benefits Act Insurance & Employers Liability,24/11/2013,15:00:00,9077,5000,4077,Claim Paid and Closed
+080,Motor -  Private Vehicles,12/10/2014,00:00:01,10200,0,10200,Claim Paid and Closed
+081,Work Injury Benefits Act Insurance & Employers Liability,05/11/2014,14:30:00,0,0,0,Closed - Below Excess
+082,Work Injury Benefits Act Insurance & Employers Liability,05/11/2014,11:00:00,17254,0,17254,Claim Paid and Closed
+083,Work Injury Benefits Act Insurance & Employers Liability,12/11/2014,09:30:00,0,0,0,Closed - Below Excess
+084,Fire and Perils - Consequential loss,24/11/2014,00:00:01,10000,10000,0,Closed - Below Excess
+085,Work Injury Benefits Act Insurance & Employers Liability,02/12/2013,00:00:01,0,0,0,Closed - Report Only
+086,Motor -  Private Vehicles,20/12/2014,08:00:00,540000,20000,532000,Claim Paid and Closed
+087,Motor -  Private Vehicles,13/12/2014,00:00:01,8000,0,8000,Claim Paid and Closed
+088,Work Injury Benefits Act Insurance & Employers Liability,20/12/2013,10:15:00,0,0,0,Closed - Report Only
+089,Work Injury Benefits Act Insurance & Employers Liability,16/12/2014,10:00:00,0,0,0,Closed - Report Only
+090,"Motor Commercial - Forklifts,Tractors & Trailers",14/12/2014,00:00:01,0,0,0,Demand Letter Received
+091,Work Injury Benefits Act Insurance & Employers Liability,16/12/2014,13:10:00,850,0,0,Closed - Report Only
+092,Work Injury Benefits Act Insurance & Employers Liability,24/01/2015,16:30:00,904.6,0,0,Closed - Below Excess
+093,Work Injury Benefits Act Insurance & Employers Liability,13/01/2015,09:30:00,0,0,0,Closed - Report Only
+094,Work Injury Benefits Act Insurance & Employers Liability,29/01/2015,12:55:00,0,0,0,Awaiting Discharge Voucher
+095,Work Injury Benefits Act Insurance & Employers Liability,01/01/2015,11:00:00,0,0,0,Closed - Report Only
+096,Work Injury Benefits Act Insurance,09/01/2015,08:35:00,1675,0,1675,Claim Paid and Closed
+097,Group Life Assurance,19/02/2015,00:00:01,1866320,0,1866320,Claim Paid and Closed
+098,Work Injury Benefits Act Insurance & Employers Liability,11/02/2015,15:30:00,1317.35,5000,0,Closed - Below Excess
+099,Work Injury Benefits Act Insurance & Employers Liability,13/02/2015,09:20:00,0,0,0,Closed - Below Excess
+100,Work Injury Benefits Act Insurance & Employers Liability,10/02/2015,11:00:00,0,0,0,Closed - Below Excess
+101,"Motor Commercial - Forklifts,Tractors & Trailers",14/02/2015,00:00:01,0,0,1113427,Repaired and Released
+102,Work Injury Benefits Act Insurance,10/02/2015,00:00:01,0,0,0,Matter in Court
+103,Work Injury Benefits Act Insurance,03/02/2015,08:00:00,57525,0,57525,Claim Paid and Closed
+104,Work Injury Benefits Act Insurance,17/02/2015,00:00:01,0,0,0,Summons Received
+105,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",12/02/2015,00:00:01,0,0,0,Summons Received
+106,Work Injury Benefits Act Insurance,11/03/2015,12:40:00,24645,0,24645,Claim Paid and Closed
+107,Work Injury Benefits Act Insurance,28/03/2015,19:45:00,0,0,0,Closed - Report Only
+108,Work Injury Benefits Act Insurance & Employers Liability,24/03/2015,09:00:00,0,0,0,Closed - Report Only
+109,Work Injury Benefits Act Insurance & Employers Liability,24/03/2015,12:45:00,0,0,0,Closed - Report Only
+110,Motor -  Private Vehicles,19/03/2015,00:00:01,30000,0,30000,Claim Paid and Closed
+111,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",26/03/2015,00:00:01,0,0,0,Summons Received
+112,Employer's Liability,10/03/2016,00:00:01,0,0,0,Summons Received
+113,Work Injury Benefits Act Insurance,22/03/2015,00:00:01,0,0,0,Summons Received
+114,WIBA/GPA/EL- APA INSURANCE,04/04/2013,00:00:01,0,0,0,Summons Received
+115,Work Injury Benefits Act Insurance & Employers Liability,02/04/2015,00:00:01,0,25000,0,Matter in Court
+116,Work Injury Benefits Act Insurance & Employers Liability,12/05/2015,12:00:00,0,0,0,Closed - Below Excess
+117,Work Injury Benefits Act Insurance & Employers Liability,05/05/2015,09:00:00,0,0,0,Closed - Report Only
+118,Work Injury Benefits Act Insurance & Employers Liability,04/05/2015,13:30:00,0,0,0,Closed - Report Only
+119,Work Injury Benefits Act Insurance & Employers Liability,25/05/2015,00:00:01,0,0,0,Summons Received
+120,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",16/06/2014,00:00:01,0,0,0,Summons Received
+121,Work Injury Benefits Act Insurance & Employers Liability,15/06/2015,00:00:01,0,0,0,Summons Received
+122,Work Injury Benefits Act Insurance & Employers Liability,15/06/2015,00:00:01,0,0,0,Summons Received
+123,Group Personal Accident,30/06/2015,09:20:00,96433,0,96433,Claim Paid and Closed
+124,Work Injury Benefits Act Insurance,15/06/2015,10:00:00,0,25000,0,Matter in Court
+125,Work Injury Benefits Act Insurance & Employers Liability,24/07/2015,11:00:00,5799,0,5799,Claim Paid and Closed
+126,Work Injury Benefits Act Insurance & Employers Liability,28/08/2015,00:00:01,1334,0,0,Awaiting Discharge Voucher
+127,Work Injury Benefits Act Insurance & Employers Liability,21/08/2015,00:00:01,0,0,0,Closed - Report Only
+128,Work Injury Benefits Act Insurance,02/08/2015,20:30:00,0,0,0,Documents Pending
+129,Work Injury Benefits Act Insurance,17/08/2015,00:00:01,0,0,0,Matter in Court
+130,Work Injury Benefits Act Insurance & Employers Liability,15/09/2015,06:45:00,3135,0,3135,Claim Paid and Closed
+131,Work Injury Benefits Act Insurance & Employers Liability,12/09/2015,00:00:01,0,0,0,Matter in Court
+132,Work Injury Benefits Act Insurance & Employers Liability,23/09/2015,00:00:01,0,0,0,Summons Received
+133,Work Injury Benefits Act Insurance & Employers Liability,05/09/2015,00:00:01,240625,0,330225,Judgment Settled
+134,Motor -  Private Vehicles,22/09/2015,00:00:01,0,0,0,Closed - Report Only
+135,Work Injury Benefits Act Insurance & Employers Liability,19/10/2015,00:00:01,0,0,0,Matter in Court
+136,Work Injury Benefits Act Insurance,30/10/2015,13:00:00,25000,0,0,Documents Pending
+137,Work Injury Benefits Act Insurance,09/10/2015,09:30:00,0,0,0,Documents Pending
+138,Employer's Liability,09/11/2015,00:00:01,160000,0,160000,Judgment Settled
+139,Employer's Liability,11/11/2015,00:00:01,0,0,0,Matter in Court
+140,Work Injury Benefits Act Insurance & Employers Liability,08/11/2015,05:30:00,40670,0,40670,Claim Paid and Closed
+141,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",03/11/2015,15:30:00,994992,5000,989992,Claim Paid and Closed
+142,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",03/11/2015,15:30:00,0,0,0,Documents Pending
+143,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",07/11/2015,00:00:01,0,0,0,Matter in Court
+144,Work Injury Benefits Act Insurance,02/11/2015,00:00:01,0,0,0,Documents Pending
+145,Work Injury Benefits Act Insurance & Employers Liability,22/11/2015,22:18:00,1597,0,1597,Claim Paid and Closed
+146,Work Injury Benefits Act Insurance,30/11/2015,09:00:00,0,0,0,Documents Pending
+147,WIBA/GPA/EL -REAL INSURANCE,06/11/2014,00:00:01,0,0,0,Summons Received
+148,Work Injury Benefits Act Insurance & Employers Liability,16/12/2015,00:00:01,0,0,0,Documents Pending
+149,Work Injury Benefits Act Insurance & Employers Liability,10/12/2015,00:00:01,11810,0,11810,Claim Paid and Closed
+150,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",14/12/2015,00:00:01,0,0,0,Documents Pending
+151,Work Injury Benefits Act Insurance,02/12/2015,10:00:00,66034,0,66034,Claim Paid and Closed
+152,Work Injury Benefits Act Insurance & Employers Liability,19/12/2015,00:00:01,0,0,0,Closed - Report Only
+153,Directors and officers liability,09/01/2016,00:00:01,0,0,0,Closed - Report Only
+154,Work Injury Benefits Act Insurance & Employers Liability,19/01/2016,10:40:00,68431,0,68431,Claim Paid and Closed
+155,Work Injury Benefits Act Insurance & Employers Liability,07/01/2016,06:00:00,26714,0,26714,Claim Paid and Closed
+156,Work Injury Benefits Act Insurance & Employers Liability,11/01/2016,08:00:00,384659,0,0,Matter in Court
+157,Work Injury Benefits Act Insurance & Employers Liability,15/01/2016,00:00:00,21687,0,0,Awaiting Discharge Voucher
+158,Work Injury Benefits Act Insurance & Employers Liability,22/03/2016,03:00:00,27100,0,27100,Claim Paid and Closed
+159,Work Injury Benefits Act Insurance,12/01/2016,11:30:00,0,0,0,Documents Pending
+160,Motor -  Private Vehicles,11/01/2016,00:00:01,442000,0,442000,Claim Paid and Closed
+161,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",16/02/2016,12:00:00,1126016,5000,1121016,Judgment Settled
+162,Fire and Perils Insurance,09/03/2016,00:00:01,319302,0,319302,Claim Paid and Closed
+163,Work Injury Benefits Act Insurance,11/03/2014,00:00:01,294440,0,294440,Matter in Court
+164,Motor -  Private Vehicles,02/04/2016,00:00:01,21800,15000,6800,Claim Paid and Closed
+165,Motor -  Private Vehicles,04/04/2016,00:00:01,42086,69250,0,Closed - Below Excess
+166,Employer's Liability,27/05/2013,11:00:00,0,0,0,Claim Repudiated
+167,Motor Commercial,10/05/2016,13:00:00,0,0,0,Matter in Court
+168,Motor -  Private Vehicles,12/06/2016,08:00:00,460000,0,236000,Claim Paid and Closed
+169,Work Injury Benefits Act Insurance & Employers Liability,13/06/2016,00:00:01,0,0,0,Summons Received
+170,Motor Commercial,22/06/2016,09:00:00,0,141500,0,Repaired and Released
+171,Work Injury Benefits Act Insurance & Employers Liability,16/06/2016,06:00:00,10334,0,10334,Claim Paid and Closed
+172,Work Injury Benefits Act Insurance,15/06/2016,16:00:00,0,0,0,Closed - Report Only
+173,Work Injury Benefits Act Insurance,24/07/2014,00:00:01,0,0,0,Summons Received
+174,Work Injury Benefits Act Insurance & Employers Liability,24/07/2016,15:20:00,102670,0,102670,Claim Paid and Closed
+175,Motor -  Private Vehicles,28/07/2016,00:00:01,6500,0,6500,Claim Paid and Closed
+176,Motor -  Private Vehicles,31/07/2016,00:00:01,0,0,10000,Repaired and Released
+177,Work Injury Benefits Act Insurance,09/07/2016,17:00:00,1006983,0,1006983,Claim Paid and Closed
+178,Work Injury Benefits Act Insurance & Employers Liability,13/07/2016,08:00:00,0,0,0,Closed - Report Only
+179,Employer's Liability,03/08/2015,18:00:00,0,0,266010,Claim Paid and Closed
+180,All risks Insurance,05/08/2016,00:00:01,9000,2500,6500,Claim Paid and Closed
+181,Work Injury Benefits Act Insurance,22/08/2016,00:00:01,0,0,0,Summons Received
+182,Motor -  Private Vehicles,21/08/2016,00:00:01,0,0,0,Repaired and Released
+183,Work Injury Benefits Act Insurance & Employers Liability,23/08/2016,00:00:01,0,0,0,Summons Received
+184,Work Injury Benefits Act Insurance & Employers Liability,16/08/2016,00:00:01,198745,0,198745,Matter in Court
+185,Fire and Perils Insurance,24/10/2016,00:00:01,78808,5000,73808,Claim Paid and Closed
+186,All risks Insurance,01/10/2016,12:30:00,27600,10000,17500,Claim Paid and Closed
+187,Work Injury Benefits Act Insurance & Employers Liability,10/10/2016,07:30:00,23527,0,23527,Claim Paid and Closed
+188,Work Injury Benefits Act Insurance & Employers Liability,11/10/2016,09:00:00,0,0,0,Matter in Court
+189,Work Injury Benefits Act Insurance,24/11/2016,12:10:00,20000,0,0,Documents Pending
+190,Motor -  Private Vehicles,13/12/2016,10:15:00,0,0,0,Closed - Report Only
+191,Work Injury Benefits Act Insurance & Employers Liability,28/12/2016,09:00:00,66068,0,0,Claim Paid and Closed
+192,Motor -  Private Vehicles,01/01/2017,00:00:01,148400,0,148400,Claim Paid and Closed
+193,Work Injury Benefits Act Insurance & Employers Liability,18/02/2017,09:00:00,0,0,0,Documents Pending
+194,Motor -  Private Vehicles,24/02/2017,11:00:00,0,0,0,Repaired and Released
+195,All risks Insurance,25/02/2017,15:00:00,644595,64460,599035,Claim Paid and Closed
+196,Domestic Package,24/02/2017,00:00:01,33500,3350,30150,Claim Paid and Closed
+197,Work Injury Benefits Act Insurance & Employers Liability,12/04/2017,14:10:00,4998,0,4998,Claim Paid and Closed
+198,Motor -  Private Vehicles,21/05/2017,00:00:01,0,0,0,Repaired and Released
+199,Work Injury Benefits Act Insurance & Employers Liability,25/05/2017,10:30:00,34598,0,34598,Claim Paid and Closed
+200,Work Injury Benefits Act Insurance & Employers Liability,05/05/2017,00:00:01,0,0,0,Documents Pending
+201,"Work Injury Benefits Act Insurance, Group Personal Accident & Employers Liability",08/06/2017,11:30:00,50000,0,0,Summons Received
+202,Motor -  Private Vehicles,07/06/2017,00:00:01,50000,0,50000,Repaired and Released
+203,Work Injury Benefits Act Insurance & Employers Liability,29/06/2017,13:00:00,6880,0,6880,Claim Paid and Closed
+204,Work Injury Benefits Act Insurance & Employers Liability,23/06/2017,15:40:00,0,0,0,Documents Pending
+205,Work Injury Benefits Act Insurance & Employers Liability,06/06/2017,15:30:00,0,0,0,Documents Pending
+206,Work Injury Benefits Act Insurance & Employers Liability,29/06/2017,00:00:01,0,0,0,Documents Pending
+207,Motor -  Private Vehicles,03/07/2017,00:00:01,15000,0,15000,Repaired and Released
+208,Work Injury Benefits Act Insurance & Employers Liability,06/07/2017,16:30:00,0,0,0,Documents Pending
+209,Motor -  Private Vehicles,21/07/2017,00:00:01,5000,0,5000,Claim Paid and Closed
+210,Domestic Package,31/07/2017,12:30:00,138150,10000,107585,Claim Paid and Closed
+211,Work Injury Benefits Act Insurance & Employers Liability,17/07/2017,10:30:00,0,0,0,Documents Pending
+212,Motor -  Private Vehicles,02/08/2017,00:00:01,14000,60000,14000,Repaired and Released
+213,Work Injury Benefits Act Insurance & Employers Liability,10/08/2017,08:30:00,0,0,0,Documents Pending
+214,Machinery Breakdown Insurance,16/08/2017,00:00:01,58255,0,50220,Claim Paid and Closed
+215,Work Injury Benefits Act Insurance & Employers Liability,19/08/2017,00:00:01,0,0,0,Documents Pending
+216,Machinery Breakdown Insurance,20/09/2017,08:00:00,6822638,0,6822638,Claim Paid and Closed
+217,Group Personal Accident,27/09/2017,15:45:00,1100362,0,1100362,Claim Paid and Closed
+218,Work Injury Benefits Act Insurance & Employers Liability,12/09/2017,08:00:00,0,0,0,Summons Received
+219,Motor Cycle,15/09/2017,07:00:00,290000,0,0,Claim Repudiated
+220,Work Injury Benefits Act Insurance & Employers Liability,09/09/2017,11:15:00,0,0,0,Documents Pending
+221,Motor Commercial,28/09/2017,00:00:01,6500,0,6500,Claim Paid and Closed
+222,Work Injury Benefits Act Insurance & Employers Liability,15/09/2017,06:30:00,0,0,0,Matter in Court
+223,All risks Insurance,22/10/2017,00:00:01,61999,6200,55799,Claim Paid and Closed
+224,Motor -  Private Vehicles,23/11/2017,11:00:00,0,0,0,Repaired and Released
+225,Work Injury Benefits Act Insurance & Employers Liability,03/11/2017,00:00:01,1845,0,1845,Claim Paid and Closed
+226,Work Injury Benefits Act Insurance & Employers Liability,11/11/2017,00:00:01,0,0,0,Summons Received
+227,Motor -  Private Vehicles,27/11/2017,00:00:01,13116,0,13116,Claim Paid and Closed
+228,Work Injury Benefits Act Insurance & Employers Liability,25/12/2017,00:00:01,20424,0,20424,Claim Paid and Closed
+229,Burglary Insurance,02/12/2017,01:00:00,45288,0,45288,Claim Paid and Closed
+230,Burglary Insurance,25/12/2017,03:00:00,45288,0,45288,Claim Paid and Closed
+231,Motor -  Private Vehicles,12/12/2017,00:00:01,7000,0,7000,Claim Paid and Closed
+232,Motor -  Private Vehicles,29/12/2017,09:05:00,8000,7500,0,Repaired and Released
+233,Work Injury Benefits Act Insurance & Employers Liability,12/01/2018,08:00:00,30048,0,30048,Claim Paid and Closed
+234,Motor Cycle,15/01/2018,15:45:00,0,5000,0,Closed - Report Only
+235,Motor -  Private Vehicles,22/01/2018,00:00:01,122847,0,42800,Claim Paid and Closed
+236,Work Injury Benefits Act Insurance & Employers Liability,06/02/2018,11:00:00,7842,0,7842,Claim Paid and Closed
+237,Burglary Insurance,30/03/2018,12:30:00,45288,10000,35288,Claim Paid and Closed
+238,Burglary Insurance,05/04/2018,00:00:01,61575,10000,51575,Claim Paid and Closed
+239,Work Injury Benefits Act Insurance & Employers Liability,21/04/2018,00:00:01,0,0,0,Documents Pending
+240,Burglary Insurance,23/04/2018,03:00:00,45288,10000,35288,Claim Paid and Closed
+241,Burglary Insurance,25/04/2018,04:00:00,45288,10000,35288,Claim Paid and Closed
+242,Fire and Perils Insurance,07/05/2018,15:00:00,154251.12,2405,109339,Claim Paid and Closed
+243,All risks Insurance,09/05/2018,05:30:00,18000,2500,15500,Claim Paid and Closed
+244,All risks Insurance,12/05/2018,16:00:00,38843,0,38843,Claim Paid and Closed
+245,Work Injury Benefits Act Insurance & Employers Liability,23/05/2018,19:20:00,0,0,0,Closed - Report Only
+246,Work Injury Benefits Act Insurance & Employers Liability,23/06/2018,17:00:00,5122,0,5122,Claim Paid and Closed
+247,Work Injury Benefits Act Insurance & Employers Liability,05/06/2018,19:00:00,18512,0,18512,Claim Paid and Closed
+248,Motor Commercial,20/06/2018,00:00:01,37120,0,37120,Claim Paid and Closed
+249,Machinery Breakdown Insurance,06/06/2018,03:00:00,802030,0,0,Adjustment in Progress
+250,Burglary Insurance,19/07/2018,03:00:00,1009400,100940,908460,Claim Paid and Closed
+251,Work Injury Benefits Act Insurance & Employers Liability,04/07/2018,05:00:00,13968,0,13968,Claim Paid and Closed
+252,Work Injury Benefits Act Insurance & Employers Liability,07/06/2018,06:50:00,25546,0,25546,Claim Paid and Closed
+253,Work Injury Benefits Act Insurance & Employers Liability,08/08/2018,00:00:01,0,0,0,Documents Pending
+254,Work Injury Benefits Act Insurance & Employers Liability,02/08/2018,13:50:00,27812,0,27812,Claim Paid and Closed
+255,Work Injury Benefits Act Insurance & Employers Liability,14/08/2018,11:20:00,13702,0,13702,Claim Paid and Closed
+256,Work Injury Benefits Act Insurance & Employers Liability,08/08/2018,13:00:00,10244,0,10244,Claim Paid and Closed
+257,Motor -  Private Vehicles,22/08/2018,06:00:00,2175520,0,1475250,Claim Paid and Closed
+258,Work Injury Benefits Act Insurance & Employers Liability,21/09/2018,09:30:00,16235,0,16235,Claim Paid and Closed
+259,Work Injury Benefits Act Insurance,24/09/2018,07:30:00,75260,0,75260,Claim Paid and Closed
+260,Work Injury Benefits Act Insurance,17/09/2018,09:30:00,0,0,0,Closed - Below Excess
+261,Motor -  Private Vehicles,22/09/2018,00:00:01,0,0,0,Windscreen LPO Issued
+262,All risks Insurance,20/10/2018,22:00:00,34509,10000,24509,Claim Paid and Closed
+263,Work Injury Benefits Act Insurance & Employers Liability,31/10/2018,08:00:00,50000,0,0,Summons Received
+264,Fire and Perils Insurance,16/10/2018,17:10:00,84655,5000,79655,Claim Paid and Closed
+265,Motor -  Private Vehicles,24/11/2018,14:30:00,38760,0,38760,Claim Paid and Closed
+266,Work Injury Benefits Act Insurance & Employers Liability,03/11/2018,00:00:01,0,0,0,Closed - Report Only
+267,Domestic Package,05/12/2018,19:00:00,523136,26157,499082.5,Claim Paid and Closed
+268,Work Injury Benefits Act Insurance & Employers Liability,15/01/2019,08:30:00,186552,0,186552,Claim Paid and Closed
+269,All risks Insurance,31/01/2019,13:00:00,32800,3280,29520,Claim Paid and Closed
+270,Motor -  Private Vehicles,26/01/2019,00:00:01,0,0,0,Windscreen LPO Issued
+271,Work Injury Benefits Act Insurance,10/02/2019,02:15:00,145675,0,145675,Claim Paid and Closed
+272,Motor -  Private Vehicles,18/02/2019,16:35:00,16240,69250,0,Closed - Below Excess
+273,Group Personal Accident,01/02/2019,18:00:00,10120,0,10120,Claim Paid and Closed
+274,Motor -  Private Vehicles,20/02/2019,00:00:01,10000,0,10000,Claim Paid and Closed
+275,Work Injury Benefits Act Insurance & Employers Liability,21/02/2019,10:30:00,100000,0,0,Documents Pending
+276,Motor Commercial,15/03/2019,00:00:01,7000,0,7000,Claim Paid and Closed
+277,Motor -  Private Vehicles,31/03/2019,10:00:00,7500,0,7500,Claim Paid and Closed
+278,Motor Commercial,29/03/2019,15:30:00,7000,0,7000,Claim Paid and Closed
+279,Motor -  Private Vehicles,13/04/2019,11:05:00,0,0,0,Closed - Below Excess
+280,Motor -  Private Vehicles,30/04/2019,00:00:01,8000,0,2978,Claim Paid and Closed
+281,Motor Commercial,23/05/2019,00:00:01,7500,0,7500,Claim Paid and Closed
+282,Work Injury Benefits Act Insurance,30/05/2019,11:00:00,0,0,0,Closed - Below Excess
+283,Work Injury Benefits Act Insurance & Employers Liability,10/05/2019,09:30:00,0,0,0,Documents Pending
+284,Motor Cycle,27/05/2019,15:45:00,4000,7500,0,Closed - Below Excess
+285,Motor -  Private Vehicles,30/05/2019,15:30:00,6000,0,4493.25,Claim Paid and Closed
+286,Motor -  Private Vehicles,01/06/2019,01:00:00,109504,0,109504,Repaired and Released
+287,Work Injury Benefits Act Insurance & Employers Liability,03/06/2019,14:52:00,0,0,0,Documents Pending
+288,Work Injury Benefits Act Insurance & Employers Liability,29/06/2019,06:45:00,0,0,0,Documents Pending
+289,Work Injury Benefits Act Insurance & Employers Liability,04/06/2019,13:53:00,0,0,0,Documents Pending
+290,Work Injury Benefits Act Insurance & Employers Liability,04/06/2019,11:15:00,0,0,0,Documents Pending
+291,All risks Insurance,13/07/2019,12:00:00,28000,2800,25200,Claim Paid and Closed
+292,Motor -  Private Vehicles,07/07/2019,13:00:00,17000,0,17000,Claim Paid and Closed
+293,Fire and Perils Insurance,30/07/2019,18:30:00,42340,0,42340,Claim Paid and Closed
+294,Goods In Transit,27/07/2019,00:00:01,38150,10000,28150,Claim Paid and Closed
+295,Motor -  Private Vehicles,06/07/2019,04:20:00,42650,0,37627.5,Claim Paid and Closed
+296,Motor -  Private Vehicles,02/08/2019,10:30:00,196040,0,0,Repaired and Released
+297,Work Injury Benefits Act Insurance & Employers Liability,23/08/2019,14:00:00,174708,0,174708,Claim Paid and Closed
+298,Work Injury Benefits Act Insurance,24/08/2019,11:30:00,98707,0,98707,Claim Paid and Closed
+299,Work Injury Benefits Act Insurance,13/08/2019,10:50:00,0,0,0,Closed - Report Only
+300,Work Injury Benefits Act Insurance & Employers Liability,20/04/2018,00:00:01,0,0,0,Summons Received
+301,Motor -  Private Vehicles,23/08/2019,16:00:00,231420,0,0,Repaired and Released
+302,Work Injury Benefits Act Insurance & Employers Liability,19/09/2019,00:00:01,20000,0,0,Documents Pending
+303,All risks Insurance,16/09/2019,13:20:00,528723.38,52872,475851,Claim Paid and Closed
+304,Motor -  Private Vehicles,03/10/2019,10:45:00,9500,0,9500,Claim Paid and Closed
+305,Work Injury Benefits Act Insurance,19/10/2019,12:00:00,6748,0,6748,Claim Paid and Closed
+306,Machinery Breakdown Insurance,23/10/2019,22:00:00,329000,32900,296100,Claim Paid and Closed
+307,Marine Cargo Insurance,14/10/2019,10:00:00,8697000,304395,8393295,Claim Paid and Closed
+308,Motor -  Private Vehicles,03/11/2019,14:30:00,8500,0,8500,Claim Paid and Closed
+309,Work Injury Benefits Act Insurance & Employers Liability,19/11/2019,09:00:00,0,0,0,Documents Pending
+310,Burglary Insurance,30/11/2019,04:00:00,90576,10000,80576,Claim Paid and Closed
+311,Work Injury Benefits Act Insurance,19/11/2019,18:00:00,2534,0,2534,Claim Paid and Closed
+312,Work Injury Benefits Act Insurance,21/11/2019,15:00:00,6334,0,6334,Claim Paid and Closed
+313,Motor -  Private Vehicles,01/11/2019,00:00:01,1100000,220000,880000,Claim Paid and Closed
+314,All risks Insurance,06/11/2019,10:00:00,368450.44,36845,331605,Claim Paid and Closed
+315,Work Injury Benefits Act Insurance,05/12/2019,12:45:00,151673,0,151673,Claim Paid and Closed
+316,Work Injury Benefits Act Insurance,17/12/2019,20:00:00,4434,0,4434,Claim Paid and Closed
+317,Motor -  Private Vehicles,08/12/2019,19:10:00,7000,0,5493,Claim Paid and Closed
+318,Work Injury Benefits Act Insurance & Employers Liability,13/01/2020,09:50:00,20000,0,0,Documents Pending
+319,Work Injury Benefits Act Insurance & Employers Liability,11/01/2020,12:12:00,0,0,0,Documents Pending
+320,Burglary Insurance,26/01/2020,00:00:01,90576,10000,80576,Claim Paid and Closed
+321,Motor -  Private Vehicles,07/01/2020,09:30:00,238483.87,0,30000,Repaired and Released
+322,Work Injury Benefits Act Insurance,20/01/2020,08:00:00,3067,0,3067,Claim Paid and Closed
+323,Work Injury Benefits Act Insurance,21/01/2020,10:00:00,0,0,0,Documents Pending
+324,Work Injury Benefits Act Insurance,27/01/2020,11:30:00,0,0,0,Documents Pending
+325,Public liability,08/01/2020,00:00:01,0,0,0,Closed - Report Only
+326,Marine Cargo Insurance,04/02/2020,00:00:01,0,0,0,Closed - Report Only
+327,Work Injury Benefits Act Insurance & Employers Liability,01/02/2020,18:20:00,0,0,0,Documents Pending
+328,Work Injury Benefits Act Insurance,25/02/2020,12:45:00,47850,0,47850,Claim Paid and Closed
+329,Work Injury Benefits Act Insurance,15/02/2020,07:22:00,4908,0,4908,Claim Paid and Closed
+330,Work Injury Benefits Act Insurance,05/02/2020,20:30:00,0,0,0,Documents Pending
+331,Motor -  Private Vehicles,24/02/2020,11:30:00,125000,0,0,Windscreen LPO Issued
+332,Work Injury Benefits Act Insurance & Employers Liability,18/02/2020,17:00:00,0,0,0,Documents Pending
+333,Work Injury Benefits Act Insurance & Employers Liability,12/02/2020,11:50:00,0,0,0,Documents Pending
+334,All risks Insurance,17/03/2020,18:00:00,75000,7500,67500,Claim Paid and Closed
+335,Machinery Breakdown Insurance,30/03/2020,00:00:01,4408356,440836,1678338,Claim Paid and Closed
+336,Fire and Perils Insurance,09/05/2020,02:34:00,414500,5000,346500,Claim Paid and Closed
+337,Motor -  Private Vehicles,30/05/2020,16:00:00,6260,0,6250,Claim Paid and Closed
+338,Work Injury Benefits Act Insurance,26/05/2020,12:30:00,412793,0,412793,Settlement Pending
+339,Motor -  Private Vehicles,26/05/2020,13:00:00,20000,0,20000,Claim Paid and Closed
+340,Work Injury Benefits Act Insurance,27/05/2020,07:00:00,0,0,0,Documents Pending
+341,Work Injury Benefits Act Insurance,13/05/2020,09:00:00,0,0,0,Documents Pending
+342,Work Injury Benefits Act Insurance,25/05/2020,12:23:00,0,0,0,Documents Pending
+343,Burglary Insurance,13/06/2020,00:00:01,90576,10000,0,Documents Pending
+344,Work Injury Benefits Act Insurance,25/07/2020,15:00:00,0,0,0,Closed - Below Excess
+345,Work Injury Benefits Act Insurance,25/07/2020,08:00:00,2454,0,2454,Claim Paid and Closed
+346,All risks Insurance,03/07/2020,12:45:00,16500,10000,0,Awaiting Discharge Voucher
+347,Motor -  Private Vehicles,31/08/2020,07:30:00,405426,0,37500,Repaired and Released
+348,Fire and Perils Insurance,29/08/2020,10:00:00,954000,0,836970,Claim Paid and Closed
+349,Work Injury Benefits Act Insurance,11/09/2020,16:30:00,0,0,0,Closed - Below Excess
+350,Work Injury Benefits Act Insurance,18/09/2020,12:00:00,0,0,0,Closed - Below Excess
+351,Fire and Perils Insurance,11/09/2020,18:00:00,51332,5000,46332,Claim Paid and Closed
+352,Fire and Perils Insurance,03/09/2020,15:00:00,86121,5000,46332,Claim Paid and Closed
+353,Motor -  Private Vehicles,21/09/2020,15:45:00,5500,0,5500,Claim Paid and Closed
+354,Work Injury Benefits Act Insurance,29/10/2020,09:40:00,0,0,0,Documents Pending
+355,Work Injury Benefits Act Insurance,29/10/2020,13:00:00,0,0,0,Closed - Below Excess
+356,Work Injury Benefits Act Insurance,30/10/2020,11:00:00,0,0,0,Documents Pending
+357,Motor -  Private Vehicles,30/11/2020,11:00:00,75000,0,75000,Claim Paid and Closed
+358,Motor Commercial,17/11/2020,00:00:01,100000,150000,0,Closed - Below Excess
+359,Work Injury Benefits Act Insurance,16/11/2020,13:40:00,0,0,0,Documents Pending
+360,Work Injury Benefits Act Insurance,20/11/2020,14:00:00,0,0,0,Documents Pending
+361,Work Injury Benefits Act Insurance,16/11/2020,00:00:01,10000,0,0,Documents Pending
+362,Motor -  Private Vehicles,03/12/2020,10:00:00,25000,0,14000,Claim Paid and Closed
+363,Motor Commercial,01/01/2021,16:00:00,112772,0,0,Repaired and Released
+364,Motor -  Private Vehicles,31/01/2021,16:35:00,25000,0,0,Windscreen LPO Issued
+365,Work Injury Benefits Act Insurance,07/02/2021,12:35:00,10000,0,0,Documents Pending
+366,Work Injury Benefits Act Insurance,20/02/2020,09:50:00,2534,0,2534,Claim Paid and Closed
+367,Motor -  Private Vehicles,05/02/2021,00:00:01,0,0,0,Closed - Report Only
+368,Work Injury Benefits Act Insurance,04/02/2021,12:35:00,0,0,0,Documents Pending
+369,Work Injury Benefits Act Insurance,04/02/2021,12:35:00,200000,0,0,Documents Pending
+370,Machinery Breakdown Insurance,30/03/2021,16:00:00,6000000,0,0,Adjustment in Progress
+371,Work Injury Benefits Act Insurance,22/03/2021,08:30:00,20000,0,0,Documents Pending
+372,Machinery Breakdown Insurance,19/04/2021,16:30:00,230775,288198,0,Closed - Below Excess
+373,Work Injury Benefits Act Insurance,22/04/2020,18:00:00,0,0,0,Closed - Below Excess
+374,Work Injury Benefits Act Insurance,13/05/2021,08:00:00,0,0,0,Closed - Report Only
+375,Work Injury Benefits Act Insurance,03/05/2021,12:00:00,100000,0,0,Documents Pending
+376,All risks Insurance,15/06/2021,17:30:00,13850,2500,10500,Settlement Pending
+377,Directors and officers liability,29/06/2021,00:00:01,950319.22,570857.65,0,Matter in Court
+378,Work Injury Benefits Act Insurance,22/07/2021,04:15:00,0,0,0,Documents Pending
+379,Motor -  Private Vehicles,03/07/2021,00:00:01,45000,0,39977,Claim Paid and Closed
+380,Work Injury Benefits Act Insurance,26/08/2021,10:00:00,20000,0,0,Documents Pending
+381,Motor -  Private Vehicles,16/09/2021,11:00:00,20000,0,0,Windscreen LPO Issued
+382,Motor -  Private Vehicles,30/09/2021,08:00:00,12500,0,10491,Claim Paid and Closed
+383,Work Injury Benefits Act Insurance,17/09/2021,17:00:00,1561200,0,1561200,Claim Paid and Closed
+384,Motor -  Private Vehicles,26/09/2021,18:40:00,458000,0,458000,Claim Paid and Closed
+385,Work Injury Benefits Act Insurance,18/10/2021,17:30:00,100000,0,0,Documents Pending
+386,Fire and Perils Insurance,12/10/2021,17:15:00,557069,5000,591174,Claim Paid and Closed
+387,Fire and Perils Insurance,14/11/2021,11:30:00,360000,0,316109,Claim Paid and Closed
+388,Work Injury Benefits Act Insurance,24/12/2021,12:30:00,10000,0,0,Documents Pending
+389,Motor -  Private Vehicles,13/12/2021,00:00:01,600000,120000,480000,Claim Paid and Closed
+390,Motor -  Private Vehicles,27/12/2021,17:00:00,22000,50000,0,Closed - Below Excess
+391,Work Injury Benefits Act Insurance,09/01/2022,08:00:00,10000,0,0,Documents Pending
+392,All risks Insurance,14/01/2022,13:45:00,13541,1354,0,Awaiting Discharge Voucher
+393,Motor -  Private Vehicles,08/01/2022,14:00:00,233914.08,0,0,Repaired and Released
+394,Work Injury Benefits Act Insurance,15/02/2022,12:30:00,0,0,0,Documents Pending
+395,Work Injury Benefits Act Insurance,02/02/2022,12:00:00,0,0,0,Documents Pending
+396,Work Injury Benefits Act Insurance,16/02/2022,12:30:00,83518,0,0,Settlement Pending
+397,Work Injury Benefits Act Insurance,15/02/2022,12:30:00,0,0,0,Documents Pending
+398,Work Injury Benefits Act Insurance,14/02/2022,12:05:00,25000,0,0,Documents Pending
+399,Work Injury Benefits Act Insurance,19/03/2022,21:30:00,30000,0,0,Awaiting Discharge Voucher
+400,Work Injury Benefits Act Insurance,04/03/2022,12:00:00,5000,0,0,Documents Pending
+401,Fire and Perils Insurance,20/04/2022,15:00:00,2000000,0,0,Adjustment in Progress
+402,Motor -  Private Vehicles,28/05/2022,10:30:00,341256,0,42000,Repaired and Released
+403,Work Injury Benefits Act Insurance,06/05/2022,12:00:00,0,0,0,Closed - Report Only
+404,Work Injury Benefits Act Insurance,13/05/2022,10:37:00,10000,0,0,Documents Pending
+405,Work Injury Benefits Act Insurance,29/06/2022,21:30:00,10000,0,0,Documents Pending
+406,All risks Insurance,18/06/2022,11:00:00,13541,1354,0,Awaiting Discharge Voucher
+407,Work Injury Benefits Act Insurance,16/06/2022,12:00:00,0,0,0,Documents Pending
+408,Work Injury Benefits Act Insurance,16/06/2022,09:30:00,0,0,0,Documents Pending
+409,Motor -  Private Vehicles,16/06/2022,11:45:00,225000,0,112500,Claim Paid and Closed
+410,Motor -  Private Vehicles,12/06/2022,15:00:00,635000,0,635000,Claim Paid and Closed
+411,Work Injury Benefits Act Insurance,08/06/2022,08:05:00,20000,0,0,Documents Pending
+412,Work Injury Benefits Act Insurance,26/08/2022,15:00:00,0,0,0,Documents Pending
+413,Work Injury Benefits Act Insurance,23/08/2022,16:44:00,5000,0,0,Documents Pending
+414,Work Injury Benefits Act Insurance,11/08/2022,08:00:00,0,0,0,Documents Pending
+415,Work Injury Benefits Act Insurance,31/08/2022,08:10:00,0,0,0,Documents Pending
+416,Fire and Perils Insurance,09/09/2022,16:40:00,143200,0,0,Adjustment in Progress
+417,Work Injury Benefits Act Insurance,01/08/2022,09:10:00,0,0,0,Documents Pending
+418,Work Injury Benefits Act Insurance,18/10/2022,11:30:00,0,0,0,Documents Pending
+419,Burglary Insurance,10/10/2022,02:22:00,76533,0,0,Documents Pending
+420,Work Injury Benefits Act Insurance,06/10/2022,08:30:00,0,0,0,Documents Pending
+421,Machinery Breakdown Insurance,27/10/2022,10:33:00,387754,0,0,Documents Pending
+422,Work Injury Benefits Act Insurance,24/11/2022,14:27:00,0,0,0,Documents Pending
+423,Work Injury Benefits Act Insurance,14/11/2022,12:15:00,800000,0,0,Documents Pending
+424,Work Injury Benefits Act Insurance,04/01/2023,12:40:00,0,0,0,Documents Pending
+425,Work Injury Benefits Act Insurance,07/01/2023,10:00:00,10000,0,0,Documents Pending
+,,,,,,,
+,,,,,,,
+,,,,65154144.86,3324976.65,45253760.11,
