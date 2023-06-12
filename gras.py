@@ -142,7 +142,7 @@ def chart_year(df):
 # Define chart selection dropdown
 chart_select = st.sidebar.selectbox(
             label="Select a chart",
-            options=["Amount Paid Analysis", "Time of Loss Analysis", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
+            options=['Top 5 Claim Payouts', "Amount Paid Analysis", "Time of Loss Analysis", "Day of Week Analysis", "Month of Incident Analysis", "Yearly Claim Analysis"]
         )
 
 # Call the corresponding chart function based on user selection
